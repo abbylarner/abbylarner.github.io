@@ -1,0 +1,236 @@
+@-moz-keyframes spin {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -moz-transform: translateY(0);
+    }
+    40% {
+        -moz-transform: rotate(5deg);
+        -moz-transform-origin: bottom center;
+    }
+    60% {
+        -moz-transform: rotate(-10deg);
+        -moz-transform-origin: bottom center;
+    }
+}
+
+@-webkit-keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -webkit-transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: rotate(5deg);
+        -webkit-transform-origin: bottom center;
+    }
+    60% {
+        -webkit-transform: rotate(-10deg);
+        -webkit-transform-origin: bottom center;
+    }
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: rotate(5deg);
+        transform-origin: bottom center;
+    }
+    60% {
+        transform: rotate(-10deg);
+        transform-origin: bottom center;
+    }
+}
+
+@-moz-keyframes bounce-vert {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -moz-transform: translateY(0);
+    }
+    40% {
+        -moz-transform: translateY(-1px);
+    }
+    60% {
+        -moz-transform: translateY(1px);
+    }
+}
+
+@-webkit-keyframes bounce-vert {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -webkit-transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: translateY(-1px);
+    }
+    60% {
+        -webkit-transform: translateY(1px);
+    }
+}
+
+@keyframes bounce-vert {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-1px);
+    }
+    60% {
+        transform: translateY(1px);
+    }
+}
+
+@-moz-keyframes translate-fb {
+    50% {
+        -moz-transform: translate(20px);
+    }
+    100% {
+        -moz-transform: translate(0px);
+    }
+}
+
+@-webkit-keyframes translate-fb {
+    50% {
+        -webkit-transform: translate(20px);
+    }
+    100% {
+        -webkit-transform: translate(0px);
+    }
+}
+
+@keyframes translate-fb {
+    50% {
+        transform: translate(20px);
+    }
+    100% {
+        transform: translate(0px);
+    }
+}
+
+@-moz-keyframes grow {
+    50% {
+        -moz-transform: scale(1.2);
+        transform-origin: bottom center;
+    }
+    100% {
+        -moz-transform: scale(1);
+        transform-origin: bottom center;
+    }
+}
+
+@-webkit-keyframes grow {
+    50% {
+        -webkit-transform: scale(1.2);
+        transform-origin: bottom center;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform-origin: bottom center;
+    }
+}
+
+@keyframes grow {
+    50% {
+        transform: scale(1.2);
+        transform-origin: bottom center;
+    }
+    100% {
+        transform: scale(1);
+        transform-origin: bottom center;
+    }
+}
+
+@keyframes flicker {
+    0% {
+        transform: rotate(-1deg);
+    }
+    20% {
+        transform: rotate(1deg);
+    }
+    40% {
+        transform: rotate(-1deg);
+    }
+    60% {
+        transform: rotate(1deg) scaleY(1.04);
+    }
+    80% {
+        transform: rotate(-2deg) scaleY(0.92);
+    }
+    100% {
+        transform: rotate(1deg);
+    }
+}
+
+@keyframes h-slide {
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+@keyframes growSlide {
+     0% {
+        transform: scale(.1);
+        
+        
+     }
+     50% {
+        transform: scale(1.2);
+        height: 100px;
+        transform-origin: bottom center;
+    }
+    100% {
+        transform: scale(1);
+        height: 75px;
+        transform-origin: bottom center;
+    }
+}
+
+

@@ -1,0 +1,179 @@
+@media (min-width: 768px) {
+    // .inner-wrapper {
+    //  overflow: hidden;
+    //     width: 80%;
+    //     margin-left: 10%;
+    //     .feature-image {
+    //         padding: .5em;
+    //     }
+    // }
+    // .row-wrapper {
+    //     margin-bottom: 5em;
+    //     padding-bottom: 5em;
+    //     padding-top: 0;
+    //     &:first-child {
+    //         padding-top: 3em;
+    //     }
+    // }
+    nav {
+        float: left;
+        a {
+            &:hover,
+            &:focus,
+            &:active {
+                color: $secondary-color;
+            }
+        }
+        #home-icon {
+            &:first-child:hover .nav-icon,
+            &:first-child:focus .nav-icon,
+            &:first-child:active .nav-icon {
+                animation: 1s ease-in-out spin;
+                animation-fill-mode: forwards;
+                .st0,
+                .st1 {
+                    stroke: $secondary-color;
+                }
+                .st1 {
+                    fill: $secondary-color;
+                }
+            }
+        }
+        #adventures-icon {
+            &:first-child:hover .nav-icon,
+            &:first-child:focus .nav-icon,
+            &:first-child:active .nav-icon {
+                #outer-st,
+                #inner-st {
+                    transform-origin: center bottom;
+                    animation-name: flicker;
+                    animation-duration: 3ms;
+                    animation-timing-function: ease-in;
+                    animation-iteration-count: infinite;
+                    animation-direction: alternate;
+                }
+                .st0,
+                .st1 {
+                    stroke: $secondary-color;
+                }
+                .st2 {
+                    fill: $secondary-color;
+                }
+            }
+        }
+        #about-icon {
+            &:first-child:hover .nav-icon,
+            &:first-child:focus .nav-icon,
+            &:first-child:active .nav-icon {
+                animation: 1s ease-in-out grow;
+                animation-fill-mode: forwards;
+                .st0 {
+                    stroke: $secondary-color;
+                }
+            }
+        }
+        #notes-icon {
+            svg {
+                overflow: visible;
+            }
+            &:first-child:hover .nav-icon,
+            &:first-child:focus .nav-icon,
+            &:first-child:active .nav-icon {
+                .st0,
+                .st1,
+                .st2,
+                .st3 {
+                    stroke: $secondary-color;
+                }
+                .st1 {
+                    fill: $secondary-color;
+                }
+                .pencil {
+                    animation: 1s ease-in-out translate-fb;
+                    -webkit-animation-fill-mode: forwards;
+                    /* Chrome, Safari, Opera */
+                    animation-fill-mode: forwards;
+                }
+            }
+        }
+    }
+
+body{
+    width:12000px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    bottom:0px;
+}
+.section{
+    margin:0px;
+    bottom:0px;
+    width:4000px;
+    float:left;
+    height:100%;
+    text-shadow:1px 1px 2px #f0f0f0;
+}
+.section h2{
+    margin:50px 0px 30px 50px;
+}
+.section p{
+    margin:20px 0px 0px 50px;
+    width:600px;
+}
+.black{
+    color:#fff;
+    background:#000 url(../images/black.jpg) no-repeat top right;
+}
+.white{
+    color:#000;
+    background:#fff url(../images/white.jpg) no-repeat top right;
+}
+.section ul{
+    list-style:none;
+    margin:20px 0px 0px 550px;
+}
+.black ul li{
+    float:left;
+    padding:5px;
+    margin:5px;
+    color:#aaa;
+}
+.black ul li a{
+    display:block;
+    color:#f0f0f0;
+}
+.black ul li a:hover{
+    text-decoration:none;
+    color:#fff;
+}
+.white ul li{
+    float:left;
+    padding:5px;
+    margin:5px;
+    color:#aaa;
+}
+.white ul li a{
+    display:block;
+    color:#222;
+}
+.white ul li a:hover{
+    text-decoration:none;
+    color:#000;
+}
+
+
+.section{
+    margin:0px;
+    width:100%;
+    float:left;
+    text-shadow:1px 1px 2px #f0f0f0;
+}
+.section h2{
+    margin:50px 0px 30px 50px;
+}
+.section p{
+    margin:20px 0px 0px 50px;
+    width:600px;
+}
+
+}
