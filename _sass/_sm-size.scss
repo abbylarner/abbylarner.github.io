@@ -1,22 +1,8 @@
 @media (min-width: 768px) {
-    // .inner-wrapper {
-    //  overflow: hidden;
-    //     width: 80%;
-    //     margin-left: 10%;
-    //     .feature-image {
-    //         padding: .5em;
-    //     }
-    // }
-    // .row-wrapper {
-    //     margin-bottom: 5em;
-    //     padding-bottom: 5em;
-    //     padding-top: 0;
-    //     &:first-child {
-    //         padding-top: 3em;
-    //     }
-    // }
+
     nav {
         float: left;
+        margin-left: 3%;
         a {
             &:hover,
             &:focus,
@@ -98,82 +84,11 @@
         }
     }
 
-body{
-    width:12000px;
-    position:absolute;
-    top:0px;
-    left:0px;
-    bottom:0px;
-}
-.section{
-    margin:0px;
-    bottom:0px;
-    width:4000px;
-    float:left;
-    height:100%;
-    text-shadow:1px 1px 2px #f0f0f0;
-}
-.section h2{
-    margin:50px 0px 30px 50px;
-}
-.section p{
-    margin:20px 0px 0px 50px;
-    width:600px;
-}
-.black{
-    color:#fff;
-    background:#000 url(../images/black.jpg) no-repeat top right;
-}
-.white{
-    color:#000;
-    background:#fff url(../images/white.jpg) no-repeat top right;
-}
-.section ul{
-    list-style:none;
-    margin:20px 0px 0px 550px;
-}
-.black ul li{
-    float:left;
-    padding:5px;
-    margin:5px;
-    color:#aaa;
-}
-.black ul li a{
-    display:block;
-    color:#f0f0f0;
-}
-.black ul li a:hover{
-    text-decoration:none;
-    color:#fff;
-}
-.white ul li{
-    float:left;
-    padding:5px;
-    margin:5px;
-    color:#aaa;
-}
-.white ul li a{
-    display:block;
-    color:#222;
-}
-.white ul li a:hover{
-    text-decoration:none;
-    color:#000;
-}
+.sub-nav-wrapper {
+        position: absolute;
+        width: 52%;
+            max-width: 800px;
 
-
-.section{
-    margin:0px;
-    width:100%;
-    float:left;
-    text-shadow:1px 1px 2px #f0f0f0;
-}
-.section h2{
-    margin:50px 0px 30px 50px;
-}
-.section p{
-    margin:20px 0px 0px 50px;
-    width:600px;
 }
 
 }

@@ -17,8 +17,21 @@ body {
 }
 
 nav {
+    padding: 1em 1.5em;
     overflow: hidden;
-    position: fixed;
+    box-sizing: border-box;
+    background-color: $off-white;
+    @include box-shadow();
+}
+
+.site-wrapper {
+    max-width: 75em;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+nav {
     z-index: 2;
     .logo-text {
         display: inline-block;
@@ -58,6 +71,7 @@ nav {
     }
     .scale-wrapper {
         margin-top: 3em;
+        overflow: hidden;
         .row:first-child {
             div {
                 width: 16.6667%;
@@ -102,13 +116,29 @@ nav {
             }
         }
     }
+
+    .toggle-icon-wrapper {
+        display: none;
+        width: 2em;  
+        float: right;
+        fill: none;
+        stroke-width: 6;
+        stroke: $primary-color;
+        margin-top: .75em;  
+        opacity: .25;    
+    }
+
+    .toggle-wrapper {
+        display: none;
+    }
+
 }
 
 #container {
-    position: relative;
-    width: 65%;
-    margin-left: 35%;
+    width: 52%;
+    margin-left: 3%;
     max-width: 800px;
+    float: left;
 
     h1 {
         text-align: center;
@@ -138,7 +168,7 @@ nav {
     }
 }
 
-.home-icon {
+.slide-icon {
     width: 4em;
     box-shadow: $box-shadow;
     display: inline-block;
@@ -165,9 +195,7 @@ nav {
 .sub-nav-wrapper {
     overflow: hidden;
     top: 1em;
-    left: 25%;
-    width: 50%;
-    position: absolute;
+    left: 38%;
     text-align: center;
 }
 
@@ -183,16 +211,67 @@ nav {
     .all-page-wrapper {
         width: 300%;
         position: relative;
+        overflow: hidden;
         .page-wrapper {
         height: 30em;
         width: 33.33%;
         float: left;
             h1 {
                 color: $white;
+                margin-bottom: 2em;
             }
         } 
+
+        .na-project {
+            width: 46%;
+            height: 5em;
+            background-color: red;
+            float: left;
+            margin-left: 2%;
+
+            &:nth-child(even){
+                margin-left: 0;
+                margin-right: 2%;
+                background-color: #333;
+            }
+        }
     }
 
+}
+
+
+.internal-wrapper {
+     padding: 1em 1.5em;
+        background-color: $off-white;
+        @include box-shadow();
+        float: left;
+        width: 56%;
+        margin-left: 3%;
+        margin-right: 3%;
+        max-width: 45.35em;
+        box-sizing: border-box;
+
+        h1 {
+            font-weight: 400;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: -10%;
+            padding: 0 0 .15em 3em;
+            border-bottom: 1px solid rgba($primary-color, .25);
+            z-index: 0;
+            position: relative;
+            width: 88%;
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 25%;
+            max-width: 6.5em;
+            display: inline-block;
+            vertical-align: middle;
+            z-index: 1;
+            position: relative;
+        }
 }
 
 

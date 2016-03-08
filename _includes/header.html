@@ -1,64 +1,69 @@
 <nav>
-    <img src="/images/logo.svg" alt="Abby Larner Compass Logo">
+   <a href="/index.html"><img src="/images/logo.svg" alt="Abby Larner Compass Logo"></a>
     <div class="logo-text">
         <p>Abby Larner</p>
         <p>UI Designer/Front End Developer</p>
     </div>
-    <ul>
-        <li>
-            <a href="#" id="home-icon">
-            	{% include icons/home-icon.html %}
-                <span>Home</span>
-            </a>
-        </li>
-        <li>
-            <a href="#" id="adventures-icon">
-                {% include icons/adventures-icon.html %}
-                <span>Adventures</span>
-            </a>
-        </li>
-        <li>
-            <a href="#" id="about-icon">
-             {% include icons/about-icon.html %}
-             <span>About</span>
-            </a>
-        </li>
-        <li>
-            <a href="#" id="notes-icon">
-                {% include icons/notes-icon.html %}
-                <span>Field Notes</span>
-            </a>
-        </li>
-    </ul>
+    <a href="#" class="toggle-icon-wrapper">
+        {% include icons/toggle-icon.html %}
+    </a>
+    <div class="toggle-wrapper">
+        <ul>
+            <li>
+                <a href="/index.html" id="home-icon">
+                	{% include icons/home-icon.html %}
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="/adventures" id="adventures-icon">
+                    {% include icons/adventures-icon.html %}
+                    <span>Adventures</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about" id="about-icon">
+                 {% include icons/about-icon.html %}
+                 <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="/field-notes" id="notes-icon">
+                    {% include icons/notes-icon.html %}
+                    <span>Field Notes</span>
+                </a>
+            </li>
+        </ul>
 
-   <div class="scale-wrapper">
-	   	<div class="row">
-		   	<div>
-		   	</div>
-		   	<div>
-		   	</div>
-		   	<div>
-		   	</div>
-		   	<div>
-		   	</div>
-		   	<div>
-		   	</div>
-		   	<div>
-		   	</div>
-	   	</div>
-	   	<div class="row">
-		   	<div>
-		   	</div>
-		   	<div>
-		   	</div>
-		   	<div>
-		   	</div>
-		   	<div>
-		   	</div>
-		   	<div>
-		   	</div>
-		   	<div>
-		   	</div>
-	   	</div>
+       <div class="scale-wrapper">
+    	   	<div class="row">
+    		   	<div>
+    		   	</div>
+    		   	<div>
+    		   	</div>
+    		   	<div>
+    		   	</div>
+    		   	<div>
+    		   	</div>
+    		   	<div>
+    		   	</div>
+    		   	<div>
+    		   	</div>
+    	   	</div>
+    	   	<div class="row">
+    		   	<div>
+    		   	</div>
+    		   	<div>
+    		   	</div>
+    		   	<div>
+    		   	</div>
+    		   	<div>
+    		   	</div>
+    		   	<div>
+    		   	</div>
+    		   	<div>
+    		   	</div>
+    	   	</div>
+       </div>
    </div>
 </nav>

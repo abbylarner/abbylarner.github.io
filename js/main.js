@@ -41,4 +41,22 @@ $(document).ready(function() {
 			fnBlocked = false;
 		}
 	});
+
+	$( window ).resize(function() {
+		if($(window).width() < 768 ){
+		  $( ".toggle-icon-wrapper" ).css( 'display', 'block' );
+		} else {
+			$( ".toggle-icon-wrapper" ).css( 'display', 'none' );
+		}
+	});
+
+	if($(window).width() < 768 ){
+		  $( ".toggle-icon-wrapper" ).css( 'display', 'block' );
+		} else {
+			$( ".toggle-icon-wrapper" ).css( 'display', 'none' );
+		}
+	$( ".toggle-icon-wrapper" ).click(function(){
+		$('.toggle-wrapper').slideToggle();
+	});
+
 });
