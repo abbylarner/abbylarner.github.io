@@ -1,9 +1,16 @@
 $(document).ready(function() {
 
-	$('.home-icon').click(function() {
-		$('.home-icon').removeClass('active-home-icon');
+	$('.slide-icon').click(function() {
+		$('.slide-icon').removeClass('active-home-icon');
 		$(this).addClass('active-home-icon');
 	})
+
+	$(window).resize(function() {
+		if ($('.slide-icon').hasClass('active-home-icon')) {
+			$(this).css('opacity', '1');
+		}
+	});
+
 
 	var naBlocked = false;
 	var fnBlocked = false;
@@ -42,21 +49,36 @@ $(document).ready(function() {
 		}
 	});
 
-	$( window ).resize(function() {
-		if($(window).width() < 768 ){
-		  $( ".toggle-icon-wrapper" ).css( 'display', 'block' );
+	$(window).resize(function() {
+		if ($(window).width() < 901) {
+			$(".toggle-icon-wrapper").css('display', 'block');
 		} else {
-			$( ".toggle-icon-wrapper" ).css( 'display', 'none' );
+			$(".toggle-icon-wrapper").css('display', 'none');
 		}
 	});
 
-	if($(window).width() < 768 ){
-		  $( ".toggle-icon-wrapper" ).css( 'display', 'block' );
-		} else {
-			$( ".toggle-icon-wrapper" ).css( 'display', 'none' );
-		}
-	$( ".toggle-icon-wrapper" ).click(function(){
+	if ($(window).width() < 901) {
+		$(".toggle-icon-wrapper").css('display', 'block');
+	} else {
+		$(".toggle-icon-wrapper").css('display', 'none');
+	}
+
+	$(".toggle-icon-wrapper").click(function() {
 		$('.toggle-wrapper').slideToggle();
+	});
+
+	if ($(window).width() >= 901) {
+		$(".toggle-wrapper").css('display', 'block');
+	} else {
+		$(".toggle-wrapper").css('display', 'none');
+	}
+
+	$(window).resize(function() {
+		if ($(window).width() >= 901) {
+			$(".toggle-wrapper").css('display', 'block');
+		} else {
+			$(".toggle-wrapper").css('display', 'none');
+		}
 	});
 
 });

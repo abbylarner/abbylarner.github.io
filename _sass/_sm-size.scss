@@ -1,8 +1,8 @@
-@media (min-width: 768px) {
-
+@media (min-width: 901px) {
     nav {
         float: left;
         margin-left: 3%;
+        width: 35%;
         a {
             &:hover,
             &:focus,
@@ -83,12 +83,96 @@
             }
         }
     }
-
-.sub-nav-wrapper {
-        position: absolute;
-        width: 52%;
-            max-width: 800px;
-
-}
-
+    .toggle-wrapper {
+        display: block;
+    }
+    #container {
+        width: 62%;
+        float: left;
+        padding: 0;
+        margin-top: 0;
+        h1 {
+            margin: 0 0 1em 0;
+        }
+    }
+    .sub-nav-wrapper {
+        margin-bottom: 2em;
+    }
+    .slide-icon {
+        width: 4em;
+        opacity: .5;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    .active-home-icon {
+        opacity: 1;
+    }
+    .inner-container {
+        padding: 1em 2em;
+        box-sizing: border-box;
+    }
+    .slide-wrapper {
+        .all-page-wrapper {
+            .page {
+                img {
+                    width: 35%;
+                }
+                &:last-child {
+                    width: 33%;
+                }
+            }
+            .project {
+                .project-text {
+                    width: 55%
+                }
+                &.fn-project {
+                    .project-text {
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+    .internal-wrapper {
+        float: left;
+        width: 56%;
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .scale-wrapper {
+        .social-icons {
+            a {
+                padding: 0 .75em .15em .75em;
+                
+                .icon-wrapper {
+                    min-width: 1em;
+                    width: 100%;
+                    max-width: 1.5em;
+                }
+                &:hover {
+                    #dribbble-icon {
+                        @include socialHover($dribbble)
+                    }
+                    #github-icon {
+                        @include socialHover($github)
+                    }
+                    #codepen-icon {
+                        @include socialHover($codepen)
+                    }
+                    #linkedin-icon {
+                        @include socialHover($linkedin)
+                    }
+                    #twitter-icon {
+                        @include socialHover($twitter)
+                    }
+                    #medium-icon {
+                        @include socialHover($medium)
+                    }
+                }
+            }
+        }
+    }
 }

@@ -1,14 +1,9 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
-@import 'normalize',
-		'colors',
-		'variables',
-		'mixins',
-		'animations',
-		'svg';
 
-@import 'xs-size',
+@import 'universal',
+		'xs-size',
 		'sm-size',
 		'md-size',
 		'scrolling',

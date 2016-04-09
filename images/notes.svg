@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 161.3 160" style="enable-background:new 0 0 161.3 160;" xml:space="preserve">
+	 viewBox="0 0 163 163" style="enable-background:new 0 0 163 163;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#E71D36;stroke:#011627;stroke-width:3;stroke-miterlimit:10;}
-	.st1{fill:#FFFFFF;stroke:#011627;stroke-width:3.6441;stroke-miterlimit:10;}
-	.st2{fill:#FFFFFF;stroke:#011627;stroke-width:3.5408;stroke-miterlimit:10;}
-	.st3{fill:none;stroke:#011627;stroke-width:3.5408;stroke-miterlimit:10;}
-	.st4{fill:#FFFFFF;stroke:#011627;stroke-width:2.61;stroke-miterlimit:10;}
-	.st5{fill:none;stroke:#011627;stroke-width:2;stroke-miterlimit:10;}
+	.st0{opacity:0.1;}
+	.st1{fill:#E71D36;stroke:#011627;stroke-width:3;stroke-miterlimit:10;}
+	.st2{fill:#FFFFFF;stroke:#011627;stroke-width:3.6441;stroke-miterlimit:10;}
+	.st3{fill:#FFFFFF;stroke:#011627;stroke-width:3.5408;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#011627;stroke-width:3.5408;stroke-miterlimit:10;}
+	.st5{fill:#FFFFFF;stroke:#011627;stroke-width:2.61;stroke-miterlimit:10;}
+	.st6{fill:none;stroke:#011627;stroke-width:2;stroke-miterlimit:10;}
 </style>
-<circle class="st0" cx="80.6" cy="80" r="77.6"/>
 <g>
-	<path class="st1" d="M107.8,118.6H53.4c-3.4,0-6.1-2.7-6.1-6.1V48.6c0-3.4,2.7-6.1,6.1-6.1h54.4c3.4,0,6.1,2.7,6.1,6.1v63.9
-		C113.9,115.8,111.2,118.6,107.8,118.6z"/>
-	<path class="st1" d="M47.3,41.5c0-3.1,2.9-5.7,6.5-5.7h53.6c3.6,0,6.5,2.6,6.5,5.7v64.6c0,3.1-2.9,5.7-6.5,5.7H53.8"/>
-	<path class="st2" d="M108,104.5H47.3V38.6c0-3.3,2.7-5.9,5.9-5.9H108c3.3,0,5.9,2.7,5.9,5.9v60C113.9,101.9,111.3,104.5,108,104.5z
-		"/>
-	<line class="st3" x1="59.6" y1="32.7" x2="59.6" y2="104.5"/>
-	<rect x="47.3" y="48.6" class="st2" width="66.6" height="20"/>
-	
-		<rect x="63.2" y="65.5" transform="matrix(-4.155083e-12 1 -1 -4.155083e-12 167.7363 -30.4985)" class="st4" width="71.8" height="6.3"/>
-	<polygon class="st2" points="66.7,111.8 66.7,127.2 73.6,120.3 80.6,127.3 80.6,111.8 	"/>
-	<line class="st5" x1="99.1" y1="32.7" x2="99.1" y2="104.5"/>
+	<circle class="st0" cx="83.5" cy="83.5" r="77.6"/>
+	<g>
+		<circle class="st1" cx="79.5" cy="79.5" r="77.6"/>
+		<path class="st2" d="M106.5,122.1H52.1c-3.4,0-6.1-2.7-6.1-6.1V52.1c0-3.4,2.7-6.1,6.1-6.1h54.4c3.4,0,6.1,2.7,6.1,6.1V116
+			C112.6,119.3,109.8,122.1,106.5,122.1z"/>
+		<path class="st2" d="M46,45c0-3.1,2.9-5.7,6.5-5.7h53.6c3.6,0,6.5,2.6,6.5,5.7v64.6c0,3.1-2.9,5.7-6.5,5.7H52.5"/>
+		<path class="st3" d="M106.7,108H46V42.1c0-3.3,2.7-5.9,5.9-5.9h54.7c3.3,0,5.9,2.7,5.9,5.9v60C112.6,105.3,109.9,108,106.7,108z"
+			/>
+		<line class="st4" x1="58.3" y1="36.2" x2="58.3" y2="108"/>
+		<rect x="46" y="52.1" class="st3" width="66.6" height="20"/>
+		
+			<rect x="61.9" y="68.9" transform="matrix(-4.155083e-12 1 -1 -4.155083e-12 169.8702 -25.6817)" class="st5" width="71.8" height="6.3"/>
+		<polygon class="st3" points="65.3,115.3 65.3,130.7 72.2,123.8 79.2,130.8 79.2,115.3 		"/>
+		<line class="st6" x1="97.8" y1="36.2" x2="97.8" y2="108"/>
+	</g>
 </g>
 </svg>

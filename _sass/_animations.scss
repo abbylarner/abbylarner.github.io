@@ -214,14 +214,11 @@
     }
 }
 
-
 @keyframes growSlide {
-     0% {
+    0% {
         transform: scale(.1);
-        
-        
-     }
-     50% {
+    }
+    50% {
         transform: scale(1.2);
         height: 100px;
         transform-origin: bottom center;
@@ -233,4 +230,47 @@
     }
 }
 
+@keyframes animatedBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 2657px;
+    }
+}
 
+@-moz-keyframes animatedBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 2657px;
+    }
+}
+
+@-webkit-keyframes animatedBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 2657px;
+    }
+}
+
+@-ms-keyframes animatedBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 2657px;
+    }
+}
+
+@-o-keyframes animatedBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 2657px;
+    }
+}

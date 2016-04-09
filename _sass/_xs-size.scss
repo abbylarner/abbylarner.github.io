@@ -5,23 +5,25 @@ h4,
 h5,
 h6,
 p,
-a {
+a,
+li {
     margin: 0;
     color: $primary-font;
     font-family: "proxima-nova", sans-serif;
 }
 
+p,
+li {
+    line-height: 1.6;
+    color: $primary-color;
+}
+
 body {
     background: url('/images/bg-texture.png') 0 0 repeat;
     background-size: 250px;
-}
-
-nav {
-    padding: 1em 1.5em;
-    overflow: hidden;
-    box-sizing: border-box;
-    background-color: $off-white;
-    @include box-shadow();
+    img {
+        max-width: 100%;
+    }
 }
 
 .site-wrapper {
@@ -30,17 +32,30 @@ nav {
     overflow: hidden;
 }
 
-
 nav {
     z-index: 2;
+    padding: 1em 1.5em;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: $off-white;
+    @extend %box-shadow;
+    .nav-text-wrapper {
+        float: left;
+        overflow: hidden;
+    }
     .logo-text {
         display: inline-block;
         vertical-align: middle;
-        margin-left: 1em;
-        p:first-child {
-            text-transform: uppercase;
-            font-weight: 700;
-            font-size: 18px;
+        margin: 0 1em;
+        p {
+            &:first-child {
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 1.125em;
+            }
+            &:last-child {
+                font-size: .75em;
+            }
         }
     }
     img {
@@ -48,14 +63,15 @@ nav {
         vertical-align: middle;
     }
     ul {
-        margin: 2em 1em 0 1em;
-        padding: 0;
+        padding: 2em 1em 0 1em;
+        margin: 0;
         li {
             list-style: none;
-            padding: 1.5em 0;
             a {
                 text-decoration: none;
                 font-weight: 600;
+                padding: 1.5em 0;
+                display: block;
                 span {
                     display: inline-block;
                     vertical-align: middle;
@@ -69,80 +85,75 @@ nav {
         display: inline-block;
         vertical-align: middle;
     }
-    .scale-wrapper {
-        margin-top: 3em;
-        overflow: hidden;
-        .row:first-child {
-            div {
-                width: 16.6667%;
-                height: 1em;
-                float: left;
-                box-sizing: border-box;
-            }
-            div:nth-child(odd) {
-                background-color: $sup-color-light;
-                border-top: 2px solid $sup-color-light;
-                border-bottom: 2px solid $sup-color-light;
-            }
-            div:nth-child(even) {
-                border-top: 2px solid $sup-color-light;
-                border-bottom: 2px solid $sup-color-light;
-            }
-            div:first-child {
-                border-radius: 2px 0 0 2px;
-            }
-            div:last-child {
-                border-radius: 0 2px 2px 0;
-                border-right: 2px solid $sup-color-light;
-            }
-        }
-        .row:last-child {
-            div {
-                margin-top: -2px;
-                width: 16.6667%;
-                height: 1em;
-                float: left;
-                box-sizing: border-box;
-                border-radius: 2px;
-            }
-            div:nth-child(odd) {
-                border-left: 2px solid $sup-color-light;
-            }
-            div:nth-child(odd) {
-                border-right: 2px solid $sup-color-light;
-            }
-            div:last-child {
-                border-right: 2px solid $sup-color-light;
-            }
-        }
-    }
-
     .toggle-icon-wrapper {
         display: none;
-        width: 2em;  
+        width: 2em;
         float: right;
-        fill: none;
-        stroke-width: 6;
-        stroke: $primary-color;
-        margin-top: .75em;  
-        opacity: .25;    
+        fill: $primary-color;
+        margin-top: .75em;
+        opacity: .15;
     }
-
     .toggle-wrapper {
         display: none;
+        clear: both;
     }
-
 }
 
-#container {
-    width: 52%;
-    margin-left: 3%;
-    max-width: 800px;
-    float: left;
+.scale-wrapper {
+    margin-top: 2em;
+    overflow: hidden;
+    padding-bottom: 1em;
+    .row {
+        overflow: hidden;
+    }
+    .scale-box-wrapper {
+        overflow: hidden;
+        div {
+            width: 16.666667%;
+            height: 1em;
+            border: 2px solid $sup-color-light;
+            float: left;
+            box-sizing: border-box;
+            &:first-child {
+                border-radius: 2px 0 0 2px;
+            }
+            &:nth-child(even) {
+                background-color: $sup-color-light;
+            }
+            &:last-child {
+                border-radius: 0 2px 2px 0;
+            }
+        }
+    }
+    .social-icons {
+        margin-top: -2px;
+        a {
+            display: block;
+            float: left;
+            width: 16.66667%;
+            box-sizing: border-box;
+            border-right: 2px solid $sup-color-light;
+            &:first-child {
+                border-left: 2px solid $sup-color-light;
+            }
+            .icon-wrapper {
+                width: 30%;
+                min-width: 2em;
+                margin: 1em auto 0 auto;
+                fill: $sup-color-light;
+            }
+        }
+    }
+}
 
+
+#container {
+    margin-top: 2em;
+    padding: 1.5em;
     h1 {
         text-align: center;
         font-size: 1.5em;
+        margin: 2em 0 1em 0;
     }
 }
 
@@ -169,15 +180,10 @@ nav {
 }
 
 .slide-icon {
-    width: 4em;
-    box-shadow: $box-shadow;
+    width: 6em;
     display: inline-block;
     opacity: .5;
     transition: opacity .5s;
-
-    &:hover {
-        opacity: 1;
-    }
 }
 
 .icon-label {
@@ -203,67 +209,108 @@ nav {
     opacity: 1;
 }
 
-
 .slide-wrapper {
-    max-width: 50em;
+    max-width: 38em;
     overflow: hidden;
-
+    margin: 0 auto;
     .all-page-wrapper {
         width: 300%;
         position: relative;
         overflow: hidden;
+        padding-right: 2%;
         .page-wrapper {
-        height: 30em;
-        width: 33.33%;
-        float: left;
+            width: 33.33%;
+            float: left;
             h1 {
                 color: $white;
                 margin-bottom: 2em;
+                margin-top: 1em;
+                @extend %text-shadow;
             }
-        } 
-
-        .na-project {
-            width: 46%;
-            height: 5em;
-            background-color: red;
-            float: left;
-            margin-left: 2%;
-
-            &:nth-child(even){
-                margin-left: 0;
-                margin-right: 2%;
-                background-color: #333;
+            .project {
+                h2 {
+                    a {
+                        margin: 0;
+                        display: block;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .page {
+            margin: 0 auto;
+            padding: 1px;
+            &:last-child {
+                width: 33.1%;
+                padding: 0;
             }
         }
     }
-
 }
 
+.project {
+    margin-bottom: 1.5em;
+    background-color: $off-white;
+    @extend %box-shadow;
+    overflow: hidden;
+    padding: 1em;
+    width: 90%;
+    img {
+        width: 25%;
+        float: left;
+        box-sizing: border-box;
+        border: 1px solid $primary-color-xlight;
+    }
+    .project-text {
+        float: left;
+        width: 65%;
+        margin: 0 5%;
+        h2 {
+            margin-bottom: .5em;
+        }
+        a {
+            margin: .5em 0;
+            display: block;
+        }
+    }
+}
+
+.project.fn-project {
+    .project-text {
+        width: 90%;
+    }
+}
+
+.na-project {
+    border-left: 10px solid $sup-color-light;
+}
+
+.fn-project {
+    border-left: 10px solid $sup-color-med;
+}
+
+.d-project {
+    border-left: 10px solid $sup-color-dark;
+}
 
 .internal-wrapper {
-     padding: 1em 1.5em;
-        background-color: $off-white;
-        @include box-shadow();
-        float: left;
-        width: 56%;
-        margin-left: 3%;
-        margin-right: 3%;
-        max-width: 45.35em;
-        box-sizing: border-box;
-
-        h1 {
-            font-weight: 400;
-            display: inline-block;
-            vertical-align: middle;
-            margin-left: -10%;
-            padding: 0 0 .15em 3em;
-            border-bottom: 1px solid rgba($primary-color, .25);
-            z-index: 0;
-            position: relative;
-            width: 88%;
-            box-sizing: border-box;
-        }
-
+    padding: 1em 1.5em;
+    background-color: $off-white;
+    @extend %box-shadow;
+    box-sizing: border-box;
+    width: 90%;
+    max-width: 45.35em;
+    margin: 2em auto;
+    .page-icon {
+        width: 25%;
+        max-width: 6.5em;
+        z-index: 1;
+        position: absolute;
+    }
+    .page-title {
+        padding-left: 0;
+    }
+    .project {
         img {
             width: 25%;
             max-width: 6.5em;
@@ -272,6 +319,190 @@ nav {
             z-index: 1;
             position: relative;
         }
+    }
+    h1 {
+        font-weight: 400;
+        vertical-align: middle;
+        margin-top: .75em;
+        margin-bottom: 2em;
+        padding-left: 4em;
+        padding-bottom: .25em;
+        box-sizing: border-box;
+        border-bottom: 1px dotted $primary-color-light;
+    }
+    h2 {
+        margin-bottom: .5em;
+        margin-top: 2em;
+    }
+    .project-text {
+        h2 {
+            margin: 0 0 .5em 0;
+        }
+    }
+    p {
+        margin-bottom: 1em;
+    }
 }
 
+.inner-wrapper {
+    margin: 0 auto;
+}
+
+.test {
+    &:first-child {
+        margin-top: 2em;
+    }
+    margin-bottom: 1em;
+}
+
+.summary {
+    padding: 1em;
+    border-radius: 4px;
+    h2 {
+        margin-bottom: .5em;
+    }
+}
+
+.adventure-wrapper {
+    overflow: hidden;
+    margin: 1em 0;
+    padding: 2em 0;
+    border-bottom: 1px solid $primary-color-xlight;
+    &:last-child {
+        border-bottom: 0;
+    }
+    img {
+        float: left;
+        width: 40%;
+        max-width: 12.5em;
+    }
+    .project-text {
+        float: left;
+        width: 56%;
+        margin-left: 4%;
+    }
+}
+
+.fn-wrapper {
+     overflow: hidden;
+    margin: 1em 0;
+    padding: 2em 0;
+    border-bottom: 1px solid $primary-color-xlight;
+    &:last-child {
+        border-bottom: 0;
+    }
+
+    h2 {
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+.cover-img {
+    max-width: 70%;
+    margin-left: 15%;
+    margin-bottom: 3em;
+}
+
+.mascot {
+    width: 40%;
+    margin: 0 30%;
+    p {
+        text-align: center;
+        margin: 1em 0 3em 0;
+    }
+}
+
+.sub-mascots {
+    overflow: hidden;
+    img {
+        width: 48%;
+        float: left;
+        margin-left: 4%;
+        margin-bottom: 1em;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+    p {
+        clear: both;
+        text-align: center;
+        margin-bottom: 2em;
+    }
+}
+
+.style-tile {
+    margin-top: 2em;
+}
+
+.wireframes {
+    p {
+        margin: .5em 0 3em 0;
+        text-align: center;
+    }
+}
+
+.screen-wrapper {
+    width: 48%;
+    float: left;
+    &:nth-child(even) {
+        margin-left: 2%;
+    }
+    &:nth-child(odd) {
+        margin-right: 2%;
+    }
+}
+
+.sb-animation img {
+    width: 50%;
+    margin-left: 25%;
+    padding: 150px 0;
+}
+
+.sb-animation {
+    width: 100%;
+    background: #6493e8 url('/images/work/scroogebuster/sb-bg.svg') center center repeat-y;
+    background-size: cover;
+    margin-bottom: 40px;
+    animation: animatedBackground 60s linear infinite;
+    -moz-animation: animatedBackground 60s linear infinite;
+    -webkit-animation: animatedBackground 60s linear infinite;
+    -ms-animation: animatedBackground 60s linear infinite;
+    -o-animation: animatedBackground 60s linear infinite;
+}
+
+.about-wrapper {
+    img {
+        width: 60%;
+        margin-left: 15%;
+        border: 6px solid $white;
+        box-shadow: 3px 3px $box-shadow;
+    }
+}
+
+.version-row {
+    overflow:hidden;
+}
+
+.version1 {
+    width: 50%;
+    float: left;
+}
+
+.live {
+    text-align: center;
+    display: inline-block;
+    background-color: $secondary-color;
+    text-decoration: none;
+    color: $white;
+    padding: .25em;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 2px;
+    padding: .25em .5em;
+    &:hover {
+        background-color: lighten($secondary-color, 5%);
+    }
+}
 

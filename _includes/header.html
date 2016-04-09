@@ -1,8 +1,10 @@
 <nav>
-   <a href="/index.html"><img src="/images/logo.svg" alt="Abby Larner Compass Logo"></a>
-    <div class="logo-text">
-        <p>Abby Larner</p>
-        <p>UI Designer/Front End Developer</p>
+    <div class="nav-text-wrapper">
+        <a href="/index.html"><img src="/images/logo.svg" alt="Abby Larner Compass Logo"></a>
+        <div class="logo-text">
+            <p>Abby Larner</p>
+            <p>UI Designer/Front End Developer</p>
+        </div>
     </div>
     <a href="#" class="toggle-icon-wrapper">
         {% include icons/toggle-icon.html %}
@@ -11,7 +13,7 @@
         <ul>
             <li>
                 <a href="/index.html" id="home-icon">
-                	{% include icons/home-icon.html %}
+                    {% include icons/home-icon.html %}
                     <span>Home</span>
                 </a>
             </li>
@@ -34,36 +36,53 @@
                 </a>
             </li>
         </ul>
-
-       <div class="scale-wrapper">
-    	   	<div class="row">
-    		   	<div>
-    		   	</div>
-    		   	<div>
-    		   	</div>
-    		   	<div>
-    		   	</div>
-    		   	<div>
-    		   	</div>
-    		   	<div>
-    		   	</div>
-    		   	<div>
-    		   	</div>
-    	   	</div>
-    	   	<div class="row">
-    		   	<div>
-    		   	</div>
-    		   	<div>
-    		   	</div>
-    		   	<div>
-    		   	</div>
-    		   	<div>
-    		   	</div>
-    		   	<div>
-    		   	</div>
-    		   	<div>
-    		   	</div>
-    	   	</div>
-       </div>
-   </div>
+        <div class="scale-wrapper">
+            <div class="row scale-box-wrapper">
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+            </div>
+            <div class="row social-icons">
+                <a href="http://github.com/abbylarner?tab=repositories" target="_blank">
+                    <div class="icon-wrapper">
+                        {% include icons/github.html %}
+                    </div>
+                </a>
+                <a href="http://twitter.com/abbylarner" target="_blank">
+                    <div class="icon-wrapper">
+                        {% include icons/twitter.html %}
+                    </div>
+                </a>
+                <a href="http://codepen.io/abbylarner/" target="_blank">
+                    <div class="icon-wrapper">
+                        {% include icons/codepen.html %}
+                    </div>
+                </a>
+                <a href="http://medium.com/@abbylarner" target="_blank">
+                    <div class="icon-wrapper">
+                        {% include icons/medium.html %}
+                    </div>
+                </a>
+                <a href="http://dribbble.com/abbylarner" target="_blank">
+                    <div class="icon-wrapper">
+                        {% include icons/dribbble.html %}
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/abby-larner-941aaa44?trk=hp-identity-name" target="_blank">
+                    <div class="icon-wrapper">
+                        {% include icons/linkedin.html %}
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
 </nav>

@@ -1,3 +1,12 @@
-@mixin box-shadow() {
+%box-shadow {
     box-shadow: 4px 4px 0 $box-shadow;
+}
+
+%text-shadow {
+    text-shadow: 2px 2px $text-shadow;
+}
+
+@mixin socialHover($socialColor){
+	fill: $socialColor;
+    transition: fill 0.25s ease-in-out;
 }	
