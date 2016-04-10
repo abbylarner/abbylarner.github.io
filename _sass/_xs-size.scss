@@ -146,7 +146,6 @@ nav {
     }
 }
 
-
 #container {
     margin-top: 2em;
     padding: 1.5em;
@@ -239,7 +238,6 @@ nav {
         }
         .page {
             margin: 0 auto;
-            padding: 1px;
             &:last-child {
                 width: 33.1%;
                 padding: 0;
@@ -249,28 +247,81 @@ nav {
 }
 
 .project {
-    margin-bottom: 1.5em;
+    margin: 0 auto 1.5em auto;
     background-color: $off-white;
     @extend %box-shadow;
     overflow: hidden;
     padding: 1em;
-    width: 90%;
-    img {
-        width: 25%;
-        float: left;
-        box-sizing: border-box;
-        border: 1px solid $primary-color-xlight;
+    width: 87%;
+    a {
+        display: block;
+        overflow: hidden;
+        padding-right: 1em;
+        text-align: center;
+        img {
+            width: 80%;
+            max-width: 300px;
+            margin-bottom: 2em;
+        }
     }
     .project-text {
-        float: left;
-        width: 65%;
-        margin: 0 5%;
         h2 {
             margin-bottom: .5em;
         }
         a {
             margin: .5em 0;
             display: block;
+            text-align: left;
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: 500px) {
+    .project {
+        a {
+            img {
+                width: 25%;
+                float: left;
+                box-sizing: border-box;
+                border: 1px solid $primary-color-xlight;
+            }
+        }
+    }
+}
+
+@media (min-width: 501px) {
+    .slide-wrapper {
+        .all-page-wrapper {
+              .page-wrapper {
+        width: 33.34%;
+    }
+        }
+    }
+    .project {
+        a {
+            float: left;
+            width: 25%;
+            padding-right: 0;
+            img {
+                width: 100%;
+            }
+        }
+
+        .project-text {
+           float: left;
+            width: 65%;
+            margin: 0 5%;
+
+            h2 {
+                a {
+                    width: 100%;
+                }
+            }
+
+            a {
+                float: none;
+            }
         }
     }
 }
@@ -384,14 +435,13 @@ nav {
 }
 
 .fn-wrapper {
-     overflow: hidden;
+    overflow: hidden;
     margin: 1em 0;
     padding: 2em 0;
     border-bottom: 1px solid $primary-color-xlight;
     &:last-child {
         border-bottom: 0;
     }
-
     h2 {
         a {
             text-decoration: none;
@@ -460,7 +510,6 @@ nav {
     padding: 150px 0;
 }
 
-
 .sb-animation {
     width: 100%;
     background: #6493e8 url('/images/work/scroogebuster/sb-bg.svg') center center repeat-y;
@@ -478,9 +527,8 @@ nav {
     margin: 0 auto;
 }
 
-
 .version-row {
-    overflow:hidden;
+    overflow: hidden;
 }
 
 .version1 {
@@ -511,17 +559,15 @@ nav {
     border: 1px solid $primary-color-xlight;
     padding: 1em;
     box-sizing: border-box;
-
-    input, textarea {
+    input,
+    textarea {
         width: 100%;
         margin-bottom: 1em;
         padding: 0.5em;
         box-sizing: border-box;
     }
-
     textarea {
-        border: 1px solid rgb(238,238,238);
+        border: 1px solid rgb(238, 238, 238);
         height: 10em
     }
 }
-
