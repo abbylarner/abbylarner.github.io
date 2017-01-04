@@ -15,8 +15,8 @@ excerpt: "A deep dive into what song expresses me."
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="/css/timeline.css">
-    <link rel="stylesheet" href="{{ " /css/song.css " | prepend: site.baseurl }}">
+    <link href="{{ "/css/timeline.css" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}" rel="stylesheet">
+    <link href="{{ "/css/song.css" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}" rel="stylesheet">
     <title>Abby Larner: A Song Discovery Project</title>
     <script src="https://use.fontawesome.com/d5ebd757f8.js"></script>
     <script src="/js/modernizr.js"></script>
@@ -25,9 +25,9 @@ excerpt: "A deep dive into what song expresses me."
 <body>
     <header>
         <div class="record">
-            <img src="/images/song/record_base@2x.png">
-            <img src="/images/song/record_overlay@3x.png" id="record-rotate">
-            <img src="/images/song/record_pin@3x.png" id="pin-animate">
+            <img src="{{ "/images/song/record_base2.png" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}" >
+            <img src="{{ "/images/song/record_overlay2.png" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}" id="record-rotate">
+            <img src="{{ "/images/song/record_pin2.png" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}" id="pin-animate">
         </div>
         <a href="#about" class="btn-main"><i class="fa fa-caret-down"></i></a>
     </header>
@@ -83,7 +83,7 @@ excerpt: "A deep dive into what song expresses me."
                         <div class="genre-height">
                             <canvas id="popChart"></canvas>
                         </div>
-                            <img src="/images/song/pop.svg" alt="microphone">
+                            <img src="/images/song/pop.png" alt="microphone">
                         </div>
                         <h3>28 Pop Songs</h3>
                         <div class="legend light"></div>
@@ -96,7 +96,7 @@ excerpt: "A deep dive into what song expresses me."
                             <div class="genre-height">
                                 <canvas id="rockChart"></canvas>
                             </div>
-                            <img src="/images/song/rock.svg" alt="guitar">
+                            <img src="/images/song/rock.png" alt="guitar">
                             <h3>4 Rock Songs</h3>
                             <div class="legend light"></div>
                             <p>Hard Rock</p>
@@ -110,7 +110,7 @@ excerpt: "A deep dive into what song expresses me."
                         <div class="genre-height">
                             <canvas id="urbanChart"></canvas>
                         </div>
-                        <img src="/images/song/urban.svg" alt="headphones">
+                        <img src="/images/song/urban.png" alt="headphones">
                         <h3>16 Urban Songs</h3>
                         <div class="legend light"></div>
                         <p>R&amp;B</p>
@@ -121,7 +121,7 @@ excerpt: "A deep dive into what song expresses me."
                         <div class="genre-height">
                             <canvas id="danceChart"></canvas>
                         </div>
-                        <img src="/images/song/dance.svg" alt="speaker">
+                        <img src="/images/song/dance.png" alt="speaker">
                         <h3>4 Dance Songs</h3>
                         <div class="legend light"></div>
                         <p>Electronic Dance</p>
@@ -132,7 +132,7 @@ excerpt: "A deep dive into what song expresses me."
                         <div class="genre-height">
                             <canvas id="otherChart"></canvas>
                         </div>
-                        <img src="/images/song/other.svg" alt="note">
+                        <img src="/images/song/other.png" alt="note">
                         <h3>11 Other Songs</h3>
                         <div class="legend secondary2"></div>
                         <p>Children's Music</p>
@@ -154,16 +154,16 @@ excerpt: "A deep dive into what song expresses me."
                 <h1 class="title">Songs by Location</h1>
                 <p>This section shows songs by location (country/continent), unique artists by location, and most represented songs overall. Out of the 62 people surveyed, only two pairs of people told me the same song.</p>
                     <div class="map-wrapper">
-                        <img src="/images/song/map.svg" alt="world map">
-                        <img src="/images/song/usflag.svg" alt="flag" class="flag">
-                        <img src="/images/song/5flag.svg" alt="flag" class="flag">
-                        <img src="/images/song/1flag.svg" alt="flag" class="flag">
-                        <img src="/images/song/1flag.svg" alt="flag" class="flag">
-                        <img src="/images/song/4flag.svg" alt="flag" class="flag">
-                        <img src="/images/song/2flag.svg" alt="flag" class="flag">
-                        <img src="/images/song/1flag.svg" alt="flag" class="flag">
-                        <img src="/images/song/1flag.svg" alt="flag" class="flag">
-                        <img src="/images/song/1flag.svg" alt="flag" class="flag">
+                        <img src="/images/song/map.png" alt="world map">
+                        <img src="/images/song/usflag.png" alt="flag" class="flag">
+                        <img src="/images/song/5flag.png" alt="flag" class="flag">
+                        <img src="/images/song/1flag.png" alt="flag" class="flag">
+                        <img src="/images/song/1flag.png" alt="flag" class="flag">
+                        <img src="/images/song/4flag.png" alt="flag" class="flag">
+                        <img src="/images/song/2flag.png" alt="flag" class="flag">
+                        <img src="/images/song/1flag.png" alt="flag" class="flag">
+                        <img src="/images/song/1flag.png" alt="flag" class="flag">
+                        <img src="/images/song/1flag.png" alt="flag" class="flag">
                     </div>
                     <div class="row">
                         <h1 class="full-header">Unique artists by country</h1>
@@ -213,7 +213,7 @@ excerpt: "A deep dive into what song expresses me."
                 <section id="cd-timeline" class="cd-container">
                     <div class="cd-timeline-block">
                         <div class="cd-timeline-img">
-                            <img src="/images/song/previous.svg" alt="Movie">
+                            <img src="/images/song/previous.png" alt="Movie">
                         </div>
                         <!-- cd-timeline-img -->
                         <div class="cd-timeline-content">
@@ -225,7 +225,7 @@ excerpt: "A deep dive into what song expresses me."
                     <!-- cd-timeline-block -->
                     <div class="cd-timeline-block">
                         <div class="cd-timeline-img">
-                            <img src="/images/song/baby.svg" alt="Picture">
+                            <img src="/images/song/baby.png" alt="Picture">
                         </div>
                         <!-- cd-timeline-img -->
                         <div class="cd-timeline-content">
@@ -237,7 +237,7 @@ excerpt: "A deep dive into what song expresses me."
                     <!-- cd-timeline-block -->
                     <div class="cd-timeline-block">
                         <div class="cd-timeline-img">
-                            <img src="/images/song/elementary.svg" alt="Location">
+                            <img src="/images/song/elementary.png" alt="Location">
                         </div>
                         <!-- cd-timeline-img -->
                         <div class="cd-timeline-content">
@@ -249,7 +249,7 @@ excerpt: "A deep dive into what song expresses me."
                     <!-- cd-timeline-block -->
                     <div class="cd-timeline-block">
                         <div class="cd-timeline-img">
-                            <img src="/images/song/books.svg" alt="Location">
+                            <img src="/images/song/books.png" alt="Location">
                         </div>
                         <!-- cd-timeline-img -->
                         <div class="cd-timeline-content">
@@ -261,7 +261,7 @@ excerpt: "A deep dive into what song expresses me."
                     <!-- cd-timeline-block -->
                     <div class="cd-timeline-block">
                         <div class="cd-timeline-img">
-                            <img src="/images/song/diploma.svg" alt="Movie">
+                            <img src="/images/song/diploma.png" alt="Movie">
                         </div>
                         <!-- cd-timeline-img -->
                         <div class="cd-timeline-content">
@@ -273,7 +273,7 @@ excerpt: "A deep dive into what song expresses me."
                     <!-- cd-timeline-block -->
                     <div class="cd-timeline-block">
                         <div class="cd-timeline-img">
-                            <img src="/images/song/college.svg" alt="Movie">
+                            <img src="/images/song/college.png" alt="Movie">
                         </div>
                         <!-- cd-timeline-img -->
                         <div class="cd-timeline-content">
@@ -285,7 +285,7 @@ excerpt: "A deep dive into what song expresses me."
                     <!-- cd-timeline-block -->
                     <div class="cd-timeline-block">
                         <div class="cd-timeline-img">
-                            <img src="/images/song/professional.svg" alt="Movie">
+                            <img src="/images/song/professional.png" alt="Movie">
                         </div>
                         <!-- cd-timeline-img -->
                         <div class="cd-timeline-content">
@@ -308,7 +308,7 @@ excerpt: "A deep dive into what song expresses me."
                     </div>
                     <div class="col-xs-12 col-sm-6 col-sm-pull-6">
                         <div class="col-xs-12 bpm-ind">
-                            <img src="/images/song/low_bpm.svg" id="low-bpm">
+                            <img src="/images/song/low_bpm.png" id="low-bpm">
                             <div class="label-wrapper">
                                 <div class="overview-label label-1">
                                     <h3>Lowest BPM</h3>
@@ -316,7 +316,7 @@ excerpt: "A deep dive into what song expresses me."
                             </div>
                         </div>
                         <div class="col-xs-12 bpm-ind">
-                            <img src="/images/song/mid_80.svg" id="avg-bpm">
+                            <img src="/images/song/mid_80.png" id="avg-bpm">
                             <div class="label-wrapper">
                                 <div class="overview-label label-2">
                                     <h3>Average BPM</h3>
@@ -324,7 +324,7 @@ excerpt: "A deep dive into what song expresses me."
                             </div>
                         </div>
                         <div class="col-xs-12 bpm-ind">
-                            <img src="/images/song/high_bpm.svg" id="high-bpm">
+                            <img src="/images/song/high_bpm.png" id="high-bpm">
                             <div class="label-wrapper">
                                 <div class="overview-label label-3">
                                     <h3>Highest BPM</h3>
@@ -338,7 +338,7 @@ excerpt: "A deep dive into what song expresses me."
         <section class="word-wrapper">
             <h1>Song Mood</h1>
             <p>Using the crowdsourced song moods from <a href="http://www.allmusic.com">allmusic.com</a> I was able to create a word cloud of the most prominent moods in the 62 songs I analzyed.</p>
-            <img src="/images/song/word_cloud2.svg">
+            <img src="/images/song/word_cloud2.png">
         </section>
         <section class="summary-wrapper">
             <div class="summary">
