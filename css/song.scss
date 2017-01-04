@@ -212,6 +212,8 @@ header {
     position: relative;
     text-align: center;
     a {
+        width: 45px;
+        height: 45px;
         display: inline-block;
         margin-top: 89%;
         margin-bottom: 1.5rem;
@@ -220,7 +222,7 @@ header {
         text-align: center;
         text-decoration: none;
         color: #fff;
-        padding: 0.8rem 1.3rem 0.5rem;
+        padding: 0.9rem 1.3rem 0.5rem;
         box-shadow: 0.23rem 0.13rem $neutral-dark;
         animation: bounce 4s infinite;
         -webkit-animation: bounce 4s infinite;
@@ -256,9 +258,7 @@ header {
             right: 0;
         }
     }
-    svg {
-        position: absolute;
-    }
+
 }
 
 #record-rotate {
@@ -301,17 +301,7 @@ header {
         position: relative;
         overflow: hidden;
     }
-    .overview-ind {
-        margin-bottom: 16rem;
-        @media (min-width: 585px) {
-            margin-bottom: 4rem;
-        }
-        @media (min-width: 900px) {
-            float: left;
-            width: 33.33%;
-            margin-bottom: 0;
-        }
-    }
+    
     img {
         width: 18rem;
         @media (min-width: 585px) {
@@ -347,14 +337,7 @@ header {
             width: 80%;
         }
     }
-    .overlay-texture {
-        position: absolute;
-        background-image: url('../images/song/vintage_overlay.png');
-        background-size: 9.8rem;
-        height: 100%;
-        width: 100%;
-        top: 0;
-    }
+
 }
 
 .genre-wrapper {
@@ -366,111 +349,10 @@ header {
         max-width: 60rem;
         margin: 0 auto;
     }
-    .genre-tree {
-        overflow: hidden;
-        margin-top: 5rem;
-        width: 90%;
-        margin: 0 auto;
-        max-width: 40rem;
-        height: 50rem;
-        .tree-children {
-            clear: both;
-            position: relative;
-            height: 50rem;
-        }
-        .rock-line {
-            width: 16%;
-            margin: 0 2%;
-            float: left;
-            text-align: center;
-            svg {
-                stroke-width: 0.25rem;
-            }
-        }
-    }
 }
 
-.genre-info {
-    text-align: center;
-    .main {
-        width: 50%;
-        float: left;
-    }
-    .secondary {
-        width: 50%;
-        float: left;
-    }
-    .pop,
-    .rock,
-    .urban,
-    .dance,
-    .other {
-        h1 {
-            font-size: 3.2rem;
-            text-transform: uppercase;
-            font-weight: 700;
-            font-family: 'Poppins', 'Helvetica', sans-serif;
-            color: $white;
-            &:first-child {
-                padding: 2.3rem 1.3rem 1.9rem 1.4rem;
-                background-color: $white;
-                border-radius: 50%;
-                box-shadow: 0 0 0 3px $white;
-                width: 8.5rem;
-                margin: 2rem auto;
-            }
-        }
-        h2 {
-            font-size: 1.4rem;
-            text-transform: uppercase;
-            font-weight: 600;
-            text-align: center;
-            float: left;
-            width: 50%;
-            margin-top: 3rem;
-            color: rgba(0, 0, 0, 0.65);
-        }
-        img {
-            width: 25%;
-            max-width: 15rem;
-            margin-top: 2rem;
-        }
-    }
-    .overview {
-        h1 {
-            color: $neutral-dark;
-            font-size: 3.2rem;
-            text-transform: uppercase;
-            font-weight: 700;
-            font-family: 'Poppins', 'Helvetica', sans-serif;
-            text-align: left;
-        }
-    }
-    .pop {
-        background: $primary-color;
-        h1 {
-            padding: 0;
-            text-align: center;
-            &:first-child {
-                border: 3px solid $primary-color;
-                color: $primary-color;
-            }
-        }
-    }
-    .rock {
-        background: $neutral-dark;
-        h1 {
-            padding: 0;
-            text-align: center;
-            &:first-child {
-                border: 3px solid $neutral-dark;
-                color: $neutral-dark;
-            }
-        }
-        h2 {
-            color: $neutral-medium;
-        }
-    }
+.genre-height {
+    min-height: 247px;
 }
 
 .genre-charts {
@@ -688,14 +570,7 @@ header {
             margin: 1rem 0 0 0;
         }
     }
-    .popChart,
-    .rockChart,
-    .urbanChart,
-    .danceChart,
-    .otherChart {
-        position: absolute;
-        z-index: 0;
-    }
+    
     iframe {
         z-index: 0;
     }
@@ -714,11 +589,7 @@ header {
         font-size: 1.25rem;
         text-transform: uppercase;
     }
-    & > p {
-        padding-bottom: 8rem;
-        color: $neutral-light;
-        max-width: 60rem;
-    }
+
 
     .title {
         font-size: 3rem;
@@ -829,41 +700,7 @@ header {
     }
 }
 
-.timeline-wrapper {
-    .v-line {
-        height: 200rem;
-        width: 3px;
-        background: $neutral-dark;
-        float: left;
-        margin-left: 5rem;
-    }
-    .year-wrapper {
-        margin-left: -2.1rem;
-        margin-top: 2rem;
-    }
-    .number {
-        p {
-            height: 3.2rem;
-            width: 3.2rem;
-            margin: 0;
-        }
-        background: $white;
-        border: 3px solid $neutral-dark;
-        border-radius: 50%;
-        display: inline-block;
-        text-align: center;
-        display: inline-block;
-        vertical-align: middle;
-        margin-left: -2.1rem;
-    }
-    .year {
-        display: inline-block;
-        vertical-align: middle;
-        margin-left: 1.5rem;
-        position: relative;
-        margin: 0 1.5rem;
-    }
-}
+
 
 .release-wrapper {
     h1 {
@@ -932,9 +769,7 @@ header {
         box-shadow: $box-shadow;
         box-sizing: border-box;
         transform-origin: 0 50%;
-        &.left {
-            left: 0;
-        }
+
         &:last-child {
             margin-bottom: 0;
         }
@@ -974,6 +809,11 @@ header {
     a {
         color: $primary-color;
     }
+    img {
+        max-width: 100rem;
+        margin: 0 auto;
+        display: block;
+    }
 }
 .summary-wrapper {
     padding: 7rem 5rem;
@@ -993,5 +833,72 @@ header {
     }
     p {
         margin-bottom: 2rem;
+    }
+
+    iframe {
+        width: 80%;
+        min-width: 280px;
+    }
+}
+
+.playlist-max {
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+.btn-reveal {
+    width: 100%;
+    border-radius: 0;
+    padding: 1.5rem;
+    background: $primary-color;
+    font-family: 'Poppins', 'Helvetica', sans-serif;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $neutral-dark;;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    &:hover, &:focus, &:active {
+        color: $neutral-dark;
+    }
+    &:hover {
+        background: darken($primary-color, 3%);
+    }
+}
+
+#songReveal a {
+    color: $primary-color;
+}
+
+.resources h1 {
+    margin-top: 4rem;
+    @media (min-width: 768px){
+        margin-top: 0;
+    }
+}
+
+.song-info p {
+    @media (min-width: 768px){
+        margin-top: 0;
+    }
+}
+
+.song-explain {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+footer {
+    text-align: center;
+}
+
+.artist-inner {
+    max-width: 100rem;
+    margin: 0 auto;
+        & > p {
+        padding-bottom: 8rem;
+        color: $neutral-light;
+        max-width: 60rem;
     }
 }

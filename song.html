@@ -1,10 +1,11 @@
 --- 
 title: Adventures 
 permalink: /song/ 
+excerpt: "A deep dive into what song expresses me."
 ---
+
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +14,7 @@ permalink: /song/
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Monoton|Poppins:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="/css/timeline.css">
     <link rel="stylesheet" href="{{ " /css/song.css " | prepend: site.baseurl }}">
     <title>Abby Larner: A Song Discovery Project</title>
@@ -31,7 +32,7 @@ permalink: /song/
         <a href="#about" class="btn-main"><i class="fa fa-caret-down"></i></a>
     </header>
     <main>
-        <section class="about-wrapper" id="#about">
+        <section class="about-wrapper" id="about">
             <div class="about">
                 <h1>Abby Larner: A Song Discovery</h1>
                 <p>
@@ -41,7 +42,7 @@ permalink: /song/
                     This song discovery project is my attempt to find a song that represents me by surveying people I interact with and choose a song that represents their views of me as well as my own.
                 </p>
                 <p>
-                    I surveyed a group of 62 people that know me in a variety of capacities and for varying lengths of time. The average amount of time I have know one of the people I surveyed was 9 years and 9 months.  The least amount of time I have known a person is 2 months and the most is 27 years.
+                    I surveyed a group of 62 people that know me in a variety of capacities and for varying lengths of time. The average amount of time I have know one of the people I surveyed was 9 years and 9 months. The least amount of time I have known a person is 2 months and the most is 27 years.
                 </p>
                 <p>Below you will find a summary of the data and my ultimate choice for a song that expresses me.
                 </p>
@@ -50,36 +51,38 @@ permalink: /song/
         <section class="overview-wrapper">
             <div class="row overview">
                 <div class="col-xs-12 col-sm-4">
-                <img src="/images/song/songs_icon.png">
-                <div class="overview-label">
-                    <h3>62 Songs</h3>
-                </div>
-                </div>
-                <div class="col-xs-12 col-sm-4">
-                <img src="/images/song/artist@2x.png">
-                <div class="overview-label left">
-                    <h3>50 Artists</h3>
-                </div>
+                    <img src="/images/song/songs_icon.png">
+                    <div class="overview-label">
+                        <h3>62 Songs</h3>
+                    </div>
                 </div>
                 <div class="col-xs-12 col-sm-4">
-                <img src="/images/song/genre@2x.png">
-                <div class="overview-label">
-                    <h3>9 Genres</h3>
+                    <img src="/images/song/artist@2x.png">
+                    <div class="overview-label left">
+                        <h3>50 Artists</h3>
+                    </div>
                 </div>
+                <div class="col-xs-12 col-sm-4">
+                    <img src="/images/song/genre@2x.png">
+                    <div class="overview-label">
+                        <h3>9 Genres</h3>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="genre-wrapper">
             <div class="genre-text">
-                <h2 class="section-title">Genres</h2>
-                <p>Of the 62 song choices that I gathered, 9 genres were represented. The below charts break down the songs per genre and also the songs per sub-genre in each main genre. 
-                <p>
+                <h1 class="section-title">Genres</h1>
+                <p>Of the 62 song choices that I gathered, 9 genres were represented. The below charts break down the songs per genre and also the songs per sub-genre in each main genre.
+                    <p>
             </div>
-            <div class="genre-charts">
+            <div class="genre-charts" id="genre-charts">
                 <div class="row">
                     <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-2 pop-img">
                         <div class="chart">
+                        <div class="genre-height">
                             <canvas id="popChart"></canvas>
+                        </div>
                             <img src="/images/song/pop.svg" alt="microphone">
                         </div>
                         <h3>28 Pop Songs</h3>
@@ -90,7 +93,9 @@ permalink: /song/
                     </div>
                     <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0 rock-img">
                         <div class="chart">
-                            <canvas id="rockChart"></canvas>
+                            <div class="genre-height">
+                                <canvas id="rockChart"></canvas>
+                            </div>
                             <img src="/images/song/rock.svg" alt="guitar">
                             <h3>4 Rock Songs</h3>
                             <div class="legend light"></div>
@@ -102,16 +107,20 @@ permalink: /song/
                 </div>
                 <div class="row">
                     <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0 urban-img">
-                        <canvas id="urbanChart"></canvas>
+                        <div class="genre-height">
+                            <canvas id="urbanChart"></canvas>
+                        </div>
                         <img src="/images/song/urban.svg" alt="headphones">
                         <h3>16 Urban Songs</h3>
-                         <div class="legend light"></div>
+                        <div class="legend light"></div>
                         <p>R&amp;B</p>
                         <div class="legend dark"></div>
                         <p>Rap</p>
                     </div>
                     <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0 dance-img">
-                        <canvas id="danceChart"></canvas>
+                        <div class="genre-height">
+                            <canvas id="danceChart"></canvas>
+                        </div>
                         <img src="/images/song/dance.svg" alt="speaker">
                         <h3>4 Dance Songs</h3>
                         <div class="legend light"></div>
@@ -120,7 +129,9 @@ permalink: /song/
                         <p>House</p>
                     </div>
                     <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0 other-img">
-                        <canvas id="otherChart"></canvas>
+                        <div class="genre-height">
+                            <canvas id="otherChart"></canvas>
+                        </div>
                         <img src="/images/song/other.svg" alt="note">
                         <h3>11 Other Songs</h3>
                         <div class="legend secondary2"></div>
@@ -139,58 +150,57 @@ permalink: /song/
         </section>
         <section>
             <div class="artist-wrapper">
+                <div class="artist-inner">
                 <h1 class="title">Songs by Location</h1>
-                <p>This section shows songs by location (country/continent), unique artists by location, and most represented songs overall. Out of the 62 people surveyed, only two pairs of people told me the same song.
-                <div class="map-wrapper">
-                    <img src="/images/song/map.svg" alt="world map">
-                    <img src="/images/song/usflag.svg" alt="flag" class="flag">
-                    <img src="/images/song/5flag.svg" alt="flag" class="flag">
-                    <img src="/images/song/1flag.svg" alt="flag" class="flag">
-                    <img src="/images/song/1flag.svg" alt="flag" class="flag">
-                    <img src="/images/song/4flag.svg" alt="flag" class="flag">
-                    <img src="/images/song/2flag.svg" alt="flag" class="flag">
-                    <img src="/images/song/1flag.svg" alt="flag" class="flag">
-                    <img src="/images/song/1flag.svg" alt="flag" class="flag">
-                    <img src="/images/song/1flag.svg" alt="flag" class="flag">
-
-                </div>
-                <div class="row">
-                    <h1 class="full-header">Unique artists by country</h1>
-
-                    <div class="col-xs-12 col-sm-6">
-                        <div class="map-info">
-                            <p class="border-main">United States <span>41</span></p>
-                            <p>Canada <span>4</span></p>
-                            <p>England <span>3</span></p>
-                            <p>France <span>2</span></p>
-                            <p>Australia <span>1</span></p>
+                <p>This section shows songs by location (country/continent), unique artists by location, and most represented songs overall. Out of the 62 people surveyed, only two pairs of people told me the same song.</p>
+                    <div class="map-wrapper">
+                        <img src="/images/song/map.svg" alt="world map">
+                        <img src="/images/song/usflag.svg" alt="flag" class="flag">
+                        <img src="/images/song/5flag.svg" alt="flag" class="flag">
+                        <img src="/images/song/1flag.svg" alt="flag" class="flag">
+                        <img src="/images/song/1flag.svg" alt="flag" class="flag">
+                        <img src="/images/song/4flag.svg" alt="flag" class="flag">
+                        <img src="/images/song/2flag.svg" alt="flag" class="flag">
+                        <img src="/images/song/1flag.svg" alt="flag" class="flag">
+                        <img src="/images/song/1flag.svg" alt="flag" class="flag">
+                        <img src="/images/song/1flag.svg" alt="flag" class="flag">
+                    </div>
+                    <div class="row">
+                        <h1 class="full-header">Unique artists by country</h1>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="map-info">
+                                <p class="border-main">United States <span>41</span></p>
+                                <p>Canada <span>4</span></p>
+                                <p>England <span>3</span></p>
+                                <p>France <span>2</span></p>
+                                <p>Australia <span>1</span></p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="map-info">
+                                <p class="border">Belgium <span>1</span></p>
+                                <p>Germany <span>1</span></p>
+                                <p>Italy <span>1</span></p>
+                                <p>Mexico <span>1</span></p>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6">
-                        <div class="map-info">
-                            <p class="border">Belgium <span>1</span></p>
-                            <p>Germany <span>1</span></p>
-                            <p>Italy <span>1</span></p>
-                            <p>Mexico <span>1</span></p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <h1>Most Represented Artists</h1>
+                            <div class="map-info">
+                                <p>Beyonce <span>3 Songs</span></p>
+                                <p>Queen <span>3 Songs</span></p>
+                                <p>Kanye West <span>2 Songs</span></p>
+                                <p>Katy Perry <span>2 Songs</span></p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12 col-md-6">
-                    <h1>Most Represented Artists</h1>
-                        <div class="map-info">
-                            
-                            <p>Beyonce <span>3 Songs</span></p>
-                            <p>Queen <span>3 Songs</span></p>
-                            <p>Kanye West <span>2 Songs</span></p>
-                            <p>Katy Perry <span>2 Songs</span></p>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-6">
-                    <h1>Most Represented Song</h1>
-                        <div class="map-info">
-                            <p>Eye of the Tiger, Survivor <span>2 Mentions</span></p>
-                            <p>Run the World (Girls), Beyonce <span>2 Mentions</span></p>
+                        <div class="col-xs-12 col-md-6">
+                            <h1>Most Represented Song</h1>
+                            <div class="map-info">
+                                <p>Eye of the Tiger, Survivor <span>2 Mentions</span></p>
+                                <p>Run the World (Girls), Beyonce <span>2 Mentions</span></p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -199,100 +209,102 @@ permalink: /song/
         <section>
             <div class="release-wrapper">
                 <h1>Songs by Release Date</h1>
-                <p>Of the 62 songs, 16 were released before my birthday on July 27th, 1989.  Below is a summary of the songs released during different periods of my life.</p>
-            <section id="cd-timeline" class="cd-container">
-                   
+                <p>Of the 62 songs, 16 were released before my birthday on July 27th, 1989. Below is a summary of the songs released during different periods of my life.</p>
+                <section id="cd-timeline" class="cd-container">
                     <div class="cd-timeline-block">
                         <div class="cd-timeline-img">
                             <img src="/images/song/previous.svg" alt="Movie">
-                        </div> <!-- cd-timeline-img -->
-
+                        </div>
+                        <!-- cd-timeline-img -->
                         <div class="cd-timeline-content">
                             <h2>1792 - 1988: Pre-birth</h2>
-                            <p>Sixteen songs were released before my birth year in 1989.</p> 
-                            
-                        </div> <!-- cd-timeline-content -->
-                    </div> <!-- cd-timeline-block -->
-
+                            <p>Sixteen songs were released before my birth year in 1989.</p>
+                        </div>
+                        <!-- cd-timeline-content -->
+                    </div>
+                    <!-- cd-timeline-block -->
                     <div class="cd-timeline-block">
                         <div class="cd-timeline-img">
                             <img src="/images/song/baby.svg" alt="Picture">
-                        </div> <!-- cd-timeline-img -->
-
+                        </div>
+                        <!-- cd-timeline-img -->
                         <div class="cd-timeline-content">
                             <h2>1989 - 1993: Early Childhood</h2>
-                            
-                            <p>I was born on July 27th, 1989. Four songs were released during this period.  Of note, <em>Under the Sea</em> from <em>The Little Mermaid</em> was released in 1989.</p>
-                            
-                        </div> <!-- cd-timeline-content -->
-                    </div> <!-- cd-timeline-block -->
-
+                            <p>I was born on July 27th, 1989. Four songs were released during this period. Of note, <em>Under the Sea</em> from <em>The Little Mermaid</em> was released in 1989.</p>
+                        </div>
+                        <!-- cd-timeline-content -->
+                    </div>
+                    <!-- cd-timeline-block -->
                     <div class="cd-timeline-block">
                         <div class="cd-timeline-img">
                             <img src="/images/song/elementary.svg" alt="Location">
-                        </div> <!-- cd-timeline-img -->
-
+                        </div>
+                        <!-- cd-timeline-img -->
                         <div class="cd-timeline-content">
                             <h2>1994 - 1999: Elementary School</h2>
                             <p>Seven songs were released during my elementary school years. During this period my family moved to Ohio and both <em>The Distance</em> by Cake and <em>Go the Distance</em> from Hercules were released.</p>
-                            
-                        </div> <!-- cd-timeline-content -->
-                    </div> <!-- cd-timeline-block -->
-
+                        </div>
+                        <!-- cd-timeline-content -->
+                    </div>
+                    <!-- cd-timeline-block -->
                     <div class="cd-timeline-block">
                         <div class="cd-timeline-img">
                             <img src="/images/song/books.svg" alt="Location">
-                        </div> <!-- cd-timeline-img -->
-
+                        </div>
+                        <!-- cd-timeline-img -->
                         <div class="cd-timeline-content">
                             <h2>2000 - 2003: Middle School</h2>
                             <p>Ten of the 62 songs were released while I was in middle school. In 6th grade I played Macbeth in the school play and <em>Survivor</em> by Destiny's Child was released and won a Grammy for Best R&amp;B performance by a Duo or Group with Vocals.</p>
-                        
-                        </div> <!-- cd-timeline-content -->
-                    </div> <!-- cd-timeline-block -->
-
+                        </div>
+                        <!-- cd-timeline-content -->
+                    </div>
+                    <!-- cd-timeline-block -->
                     <div class="cd-timeline-block">
                         <div class="cd-timeline-img">
                             <img src="/images/song/diploma.svg" alt="Movie">
-                        </div> <!-- cd-timeline-img -->
-
+                        </div>
+                        <!-- cd-timeline-img -->
                         <div class="cd-timeline-content">
                             <h2>2004 - 2007: High School</h2>
-                            <p>Five songs were released while I was in high school. I played the flute in the marching band and trombone in the jazz band.  I graduated in 2007 at the same time the Kanye West's album <em>Graduation</em> with song <em>Stronger</em> was released.</p>
-                        </div> <!-- cd-timeline-content -->
-                    </div> <!-- cd-timeline-block -->
-
-                     <div class="cd-timeline-block">
+                            <p>Five songs were released while I was in high school. I played the flute in the marching band and trombone in the jazz band. I graduated in 2007 at the same time the Kanye West's album <em>Graduation</em> with song <em>Stronger</em> was released.</p>
+                        </div>
+                        <!-- cd-timeline-content -->
+                    </div>
+                    <!-- cd-timeline-block -->
+                    <div class="cd-timeline-block">
                         <div class="cd-timeline-img">
                             <img src="/images/song/college.svg" alt="Movie">
-                        </div> <!-- cd-timeline-img -->
-
+                        </div>
+                        <!-- cd-timeline-img -->
                         <div class="cd-timeline-content">
                             <h2>2008 - 2011: College</h2>
                             <p>Six songs were released while I attended college at first at Haverford College and then at the University of Virginia. Two of the songs from the beginning and end of my college career, <em>Diva</em> and <em>Run the World (Girls)</em>, were by Beyonce.</p>
-                        </div> <!-- cd-timeline-content -->
-                    </div> <!-- cd-timeline-block -->
-
+                        </div>
+                        <!-- cd-timeline-content -->
+                    </div>
+                    <!-- cd-timeline-block -->
                     <div class="cd-timeline-block">
                         <div class="cd-timeline-img">
                             <img src="/images/song/professional.svg" alt="Movie">
-                        </div> <!-- cd-timeline-img -->
-
+                        </div>
+                        <!-- cd-timeline-img -->
                         <div class="cd-timeline-content">
                             <h2>2012 - 2016: Professional Years</h2>
                             <p>Eleven of the 62 songs were released during the 5 years after college. None of them were released in 2015, the year that I moved from Madison, Wisconsin to Austin, Texas.</p>
-                        </div> <!-- cd-timeline-content -->
-                    </div> <!-- cd-timeline-block -->
-                </section> <!-- cd-timeline -->
+                        </div>
+                        <!-- cd-timeline-content -->
+                    </div>
+                    <!-- cd-timeline-block -->
+                </section>
+                <!-- cd-timeline -->
             </div>
         </section>
-
         <section class="bpm-wrapper">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 col-sm-push-6">
                         <h1>Beats per Minute (BPM)</h1>
-                        <p>The beats per minute of a song represents how fast or slow the song is.  The higher the number of beats per minute, the faster the song is. The average number of beats per minute for the 62 songs was 110.  The lowest BPM of any song was 58 (<em>We are the Champions</em>, Queen) and the highest BPM was 180 (<em>Eye of the Tiger</em>, Survivor).</p>
+                        <p>The beats per minute of a song represents how fast or slow the song is. The higher the number of beats per minute, the faster the song is. The average number of beats per minute for the 62 songs was 110. The lowest BPM of any song was 58 (<em>We are the Champions</em>, Queen) and the highest BPM was 180 (<em>Eye of the Tiger</em>, Survivor).</p>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-sm-pull-6">
                         <div class="col-xs-12 bpm-ind">
@@ -316,12 +328,10 @@ permalink: /song/
                             <div class="label-wrapper">
                                 <div class="overview-label label-3">
                                     <h3>Highest BPM</h3>
-
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </section>
@@ -332,36 +342,64 @@ permalink: /song/
         </section>
         <section class="summary-wrapper">
             <div class="summary">
-            <h1>What's the song that expresses me?</h1>
-            <p> Well, I was looking for a song that could hit the most representated aspects from each data point.  I still needed to feel like the song represented me as well.  Here's a summary of what I was looking for:
-                        </p>
-            <ul>
-                <li><p>A pop song in the pop/rock category</p></li>
-                <li><p>An artist from the United States or one of the most represented artists: Beyonce or Queeen.</p></li>
-                <li><p>A release date before I was born or within the past five years.</p></li>
-                <li><p>A song with a bpm of about 110 or close to the most represented bpm, 128 (a fast-paced, up-tempo song).</p></li>
-                <li><p>A song with a mood that represents the most common mood throughout the selections.  A few are confident, cheerful, amiable, playful, energetic, exhuberant, lively, celebratory, strong, and light.</p></li>
-            </ul>
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#songReveal" aria-expanded="false" aria-controls="collapseExample">
-              Reveal Song!
-            </button>
-            <div class="collapse" id="songReveal">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6">
-                    <iframe src="https://embed.spotify.com/?uri=spotify%3Atrack%3A7xHWNBFm6ObGEQPaUxHuKO" width="100%" height="380" frameborder="0" allowtransparency="true"></iframe>
+                <h1>What's the song that expresses me?</h1>
+                <p> Well, I was looking for a song that could hit the most representated aspects from each data point. I still needed to feel like the song represented me as well. Here's a summary of what I was looking for:
+                </p>
+                <ul>
+                    <li>
+                        <p>A pop song in the pop/rock category</p>
+                    </li>
+                    <li>
+                        <p>An artist from the United States or one of the most represented artists: Beyonce or Queeen.</p>
+                    </li>
+                    <li>
+                        <p>A release date before I was born or within the past five years.</p>
+                    </li>
+                    <li>
+                        <p>A song with a bpm of about 110 or close to the most represented bpm, 128 (a fast-paced, up-tempo song).</p>
+                    </li>
+                    <li>
+                        <p>A song with a mood that represents the most common mood throughout the selections. A few are confident, cheerful, amiable, playful, energetic, exhuberant, lively, celebratory, strong, and light.</p>
+                    </li>
+                </ul>
+                <button class="btn btn-reveal" type="button" data-toggle="collapse" data-target="#songReveal" aria-expanded="false" aria-controls="collapseExample">
+                    Reveal Song!
+                </button>
+                <div class="collapse" id="songReveal">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            
+                            <iframe src="https://embed.spotify.com/?uri=spotify%3Atrack%3A7xHWNBFm6ObGEQPaUxHuKO" width="100%" height="380" frameborder="0" allowtransparency="true"></iframe>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 song-info">
+                            <p><em>The Greatest</em>, By Sia </p>
+                            <ul>
+                                <li><p>Genre: Pop/Rock</p></li>
+                                <li><p>Artist Origin: Australia</p></li>
+                                <li><p>Release Year: 2016</p></li>
+                                <li><p>Beats per Minute: 182</p></li>
+                                <li><p>Song Mood: inspirational, strong, resilient, lively, energetic</p></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 song-explain">
+                            <p>Sia’s The Greatest is an energetic song that has a positive message about overcoming adversity, confidence and strength. Along with reflecting the most represented genre, release date, and tempo from my research, it has the same message as many of the songs others submitted. </p>
+                            <p><a href="#playlist">See the full playlist</a></p>
+                        </div>
                     </div>
                 </div>
-            </div>
         </section>
-        <section class="playlist-wrapper">
+        <section class="playlist-wrapper" id="playlist">
             <div class="container-fluid">
-                <div class="row">
+                <div class="row playlist-max">
                     <div class="col-xs-12 col-sm-6">
                         <h1>Full Playlist</h1>
                         <p> This playlist is a compilation of all of the songs submitted for this research.</p>
                         <iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aalarner89%3Aplaylist%3A7rpbpp3jTBEcAwK8fq3f8M" width="100%" height="400" frameborder="0" allowtransparency="true"></iframe>
                     </div>
-                    <div class="col-xs-12 col-sm-6">
+                    <div class="col-xs-12 col-sm-6 resources">
                         <h1>Resources</h1>
                         <ul>
                             <li>
@@ -384,13 +422,17 @@ permalink: /song/
                 </div>
             </div>
         </section>
+        <footer>
+            <p>Site Design and Development by Abby Larner | &copy; 2017</p>
+        </footer>
     </main>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-<!--     <script src="/js/timeline.js"></script>
- -->    <script src="/js/song.js"></script>
+    <!--     <script src="/js/timeline.js"></script>
+ -->
+    <script src="/js/song.js"></script>
 </body>
 
 </html>

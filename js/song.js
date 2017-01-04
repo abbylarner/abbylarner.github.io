@@ -1,176 +1,346 @@
-// For a pie chart
-var popCtx = document.getElementById("popChart");
-var popData = {
-    labels: [
-        "Pop/Rock",
-        "Dance Pop"
-        ],
-    datasets: [
-        {
-            data: [16,13],
-            backgroundColor: [
-                "#d6702b",
-                "#6d3815"
-            ],
-            hoverBackgroundColor: [
-                "#d6702b",
-                "#6d3815"
-            ]
-        }]
-};
+$(document).ready(function() {
+//     var trigger = false;
+//     $(window).scroll(function() {
 
-var popOptions = {
-	legend: {
-		display: false
-	}
-};
-var popChart = new Chart(popCtx, {
-    type: 'doughnut',
-    data: popData,
-    options: popOptions
-});
+//         wS = $(this).scrollTop();
+//         if (wS > 1627 && trigger === false) {
 
-var rockCtx = document.getElementById("rockChart");
-var rockData = {
-    labels: [
-        "Hard Rock",
-        "Indie Rock"
-        ],
-    datasets: [
-        {
-            data: [2,2],
-            backgroundColor: [
-                "#666",
-                "#231f20"
-            ],
-            hoverBackgroundColor: [
-                "#666",
-                "#231f20"
-            ]
-        }]
-};
+//             // For a pie chart
+//             var popCtx = document.getElementById("popChart");
+//             var popData = {
+//                 labels: [
+//                     "Pop/Rock",
+//                     "Dance Pop"
+//                 ],
+//                 datasets: [{
+//                     data: [16, 13],
+//                     backgroundColor: [
+//                         "#d6702b",
+//                         "#6d3815"
+//                     ],
+//                     hoverBackgroundColor: [
+//                         "#d6702b",
+//                         "#6d3815"
+//                     ]
+//                 }]
+//             };
 
-var rockOptions = {
-	legend: {
-		display: false
-	}
-};
-var rockChart = new Chart(rockCtx, {
-    type: 'doughnut',
-    data: rockData,
-    options: rockOptions
-});
+//             var popOptions = {
+//                 legend: {
+//                     display: false
+//                 }
+//             };
+//             var popChart = new Chart(popCtx, {
+//                 type: 'doughnut',
+//                 data: popData,
+//                 options: popOptions
+//             });
 
-//Urban
-var urbanCtx = document.getElementById("urbanChart");
-var urbanData = {
-    labels: [
-        "R&B",
-        "Rap"
-        ],
-    datasets: [
-        {
-            data: [7,9],
-            backgroundColor: [
-                "#5D93A0",
-                "#2e494f"
-            ],
-            hoverBackgroundColor: [
-                "#5D93A0",
-                "#2e494f"
-            ]
-        }]
-};
+//             var rockCtx = document.getElementById("rockChart");
+//             var rockData = {
+//                 labels: [
+//                     "Hard Rock",
+//                     "Indie Rock"
+//                 ],
+//                 datasets: [{
+//                     data: [2, 2],
+//                     backgroundColor: [
+//                         "#666",
+//                         "#231f20"
+//                     ],
+//                     hoverBackgroundColor: [
+//                         "#666",
+//                         "#231f20"
+//                     ]
+//                 }]
+//             };
 
-var urbanOptions = {
-	legend: {
-		display: false
-	}
-};
-var urbanChart = new Chart(urbanCtx, {
-    type: 'doughnut',
-    data: urbanData,
-    options: urbanOptions
-});
+//             var rockOptions = {
+//                 legend: {
+//                     display: false
+//                 }
+//             };
+//             var rockChart = new Chart(rockCtx, {
+//                 type: 'doughnut',
+//                 data: rockData,
+//                 options: rockOptions
+//             });
 
+//             //Urban
+//             var urbanCtx = document.getElementById("urbanChart");
+//             var urbanData = {
+//                 labels: [
+//                     "R&B",
+//                     "Rap"
+//                 ],
+//                 datasets: [{
+//                     data: [7, 9],
+//                     backgroundColor: [
+//                         "#5D93A0",
+//                         "#2e494f"
+//                     ],
+//                     hoverBackgroundColor: [
+//                         "#5D93A0",
+//                         "#2e494f"
+//                     ]
+//                 }]
+//             };
 
-//Dance
-var danceCtx = document.getElementById("danceChart");
-var danceData = {
-    labels: [
-        "Electronic Dance",
-        "House"
-        ],
-    datasets: [
-        {
-            data: [3,1],
-            backgroundColor: [
-                "#4C385E",
-                "#251b2f"
-            ],
-            hoverBackgroundColor: [
-                "#4C385E",
-                "#251b2f"
-            ]
-        }]
-};
-
-var danceOptions = {
-	legend: {
-		display: false
-	}
-};
-var danceChart = new Chart(danceCtx, {
-    type: 'doughnut',
-    data: danceData,
-    options: danceOptions
-});
-
-//Other
-var otherCtx = document.getElementById("otherChart");
-var otherData = {
-    labels: [
-        "Classical",
-        "Latin",
-        "Children's Music",
-        "Reggae",
-        "Disco"
-        ],
-    datasets: [
-        {
-            data: [3,1,5,1,1],
-            backgroundColor: [
-                "#d6702b",
-                "#231f20",
-                "#5D93A0",
-                "#4C385E",
-                "#E0B848"
-            ],
-            hoverBackgroundColor: [
-                "#d6702b",
-                "#231f20",
-                "#5D93A0",
-                "#4C385E",
-                "#E0B848"
-            ]
-        }]
-};
-
-var otherOptions = {
-	legend: {
-		display: false
-	}
-};
-var otherChart = new Chart(otherCtx, {
-    type: 'doughnut',
-    data: otherData,
-    options: otherOptions
-});
+//             var urbanOptions = {
+//                 legend: {
+//                     display: false
+//                 }
+//             };
+//             var urbanChart = new Chart(urbanCtx, {
+//                 type: 'doughnut',
+//                 data: urbanData,
+//                 options: urbanOptions
+//             });
 
 
+//             //Dance
+//             var danceCtx = document.getElementById("danceChart");
+//             var danceData = {
+//                 labels: [
+//                     "Electronic Dance",
+//                     "House"
+//                 ],
+//                 datasets: [{
+//                     data: [3, 1],
+//                     backgroundColor: [
+//                         "#4C385E",
+//                         "#251b2f"
+//                     ],
+//                     hoverBackgroundColor: [
+//                         "#4C385E",
+//                         "#251b2f"
+//                     ]
+//                 }]
+//             };
+
+//             var danceOptions = {
+//                 legend: {
+//                     display: false
+//                 }
+//             };
+//             var danceChart = new Chart(danceCtx, {
+//                 type: 'doughnut',
+//                 data: danceData,
+//                 options: danceOptions
+//             });
+
+//             //Other
+//             var otherCtx = document.getElementById("otherChart");
+//             var otherData = {
+//                 labels: [
+//                     "Classical",
+//                     "Latin",
+//                     "Children's Music",
+//                     "Reggae",
+//                     "Disco"
+//                 ],
+//                 datasets: [{
+//                     data: [3, 1, 5, 1, 1],
+//                     backgroundColor: [
+//                         "#d6702b",
+//                         "#231f20",
+//                         "#5D93A0",
+//                         "#4C385E",
+//                         "#E0B848"
+//                     ],
+//                     hoverBackgroundColor: [
+//                         "#d6702b",
+//                         "#231f20",
+//                         "#5D93A0",
+//                         "#4C385E",
+//                         "#E0B848"
+//                     ]
+//                 }]
+//             };
+
+//             var otherOptions = {
+//                 legend: {
+//                     display: false
+//                 }
+//             };
+//             var otherChart = new Chart(otherCtx, {
+//                 type: 'doughnut',
+//                 data: otherData,
+//                 options: otherOptions
+//             });
 
 
-jQuery(document).ready(function($){
+//             var trigger = true;
+
+//         }
+//     });
+
+ // For a pie chart
+            var popCtx = document.getElementById("popChart");
+            var popData = {
+                labels: [
+                    "Pop/Rock",
+                    "Dance Pop"
+                ],
+                datasets: [{
+                    data: [16, 13],
+                    backgroundColor: [
+                        "#d6702b",
+                        "#6d3815"
+                    ],
+                    hoverBackgroundColor: [
+                        "#d6702b",
+                        "#6d3815"
+                    ]
+                }]
+            };
+
+            var popOptions = {
+                legend: {
+                    display: false
+                }
+            };
+            var popChart = new Chart(popCtx, {
+                type: 'doughnut',
+                data: popData,
+                options: popOptions
+            });
+
+            var rockCtx = document.getElementById("rockChart");
+            var rockData = {
+                labels: [
+                    "Hard Rock",
+                    "Indie Rock"
+                ],
+                datasets: [{
+                    data: [2, 2],
+                    backgroundColor: [
+                        "#666",
+                        "#231f20"
+                    ],
+                    hoverBackgroundColor: [
+                        "#666",
+                        "#231f20"
+                    ]
+                }]
+            };
+
+            var rockOptions = {
+                legend: {
+                    display: false
+                }
+            };
+            var rockChart = new Chart(rockCtx, {
+                type: 'doughnut',
+                data: rockData,
+                options: rockOptions
+            });
+
+            //Urban
+            var urbanCtx = document.getElementById("urbanChart");
+            var urbanData = {
+                labels: [
+                    "R&B",
+                    "Rap"
+                ],
+                datasets: [{
+                    data: [7, 9],
+                    backgroundColor: [
+                        "#5D93A0",
+                        "#2e494f"
+                    ],
+                    hoverBackgroundColor: [
+                        "#5D93A0",
+                        "#2e494f"
+                    ]
+                }]
+            };
+
+            var urbanOptions = {
+                legend: {
+                    display: false
+                }
+            };
+            var urbanChart = new Chart(urbanCtx, {
+                type: 'doughnut',
+                data: urbanData,
+                options: urbanOptions
+            });
+
+
+            //Dance
+            var danceCtx = document.getElementById("danceChart");
+            var danceData = {
+                labels: [
+                    "Electronic Dance",
+                    "House"
+                ],
+                datasets: [{
+                    data: [3, 1],
+                    backgroundColor: [
+                        "#4C385E",
+                        "#251b2f"
+                    ],
+                    hoverBackgroundColor: [
+                        "#4C385E",
+                        "#251b2f"
+                    ]
+                }]
+            };
+
+            var danceOptions = {
+                legend: {
+                    display: false
+                }
+            };
+            var danceChart = new Chart(danceCtx, {
+                type: 'doughnut',
+                data: danceData,
+                options: danceOptions
+            });
+
+            //Other
+            var otherCtx = document.getElementById("otherChart");
+            var otherData = {
+                labels: [
+                    "Classical",
+                    "Latin",
+                    "Children's Music",
+                    "Reggae",
+                    "Disco"
+                ],
+                datasets: [{
+                    data: [3, 1, 5, 1, 1],
+                    backgroundColor: [
+                        "#d6702b",
+                        "#231f20",
+                        "#5D93A0",
+                        "#4C385E",
+                        "#E0B848"
+                    ],
+                    hoverBackgroundColor: [
+                        "#d6702b",
+                        "#231f20",
+                        "#5D93A0",
+                        "#4C385E",
+                        "#E0B848"
+                    ]
+                }]
+            };
+
+            var otherOptions = {
+                legend: {
+                    display: false
+                }
+            };
+            var otherChart = new Chart(otherCtx, {
+                type: 'doughnut',
+                data: otherData,
+                options: otherOptions
+            });
+
+
+
     var timelineBlocks = $('.cd-timeline-block'),
         offset = 0.8;
 
@@ -178,39 +348,37 @@ jQuery(document).ready(function($){
     hideBlocks(timelineBlocks, offset);
 
     //on scolling, show/animate timeline blocks when enter the viewport
-    $(window).on('scroll', function(){
-        (!window.requestAnimationFrame) 
-            ? setTimeout(function(){ showBlocks(timelineBlocks, offset); }, 100)
-            : window.requestAnimationFrame(function(){ showBlocks(timelineBlocks, offset); });
+    $(window).on('scroll', function() {
+        (!window.requestAnimationFrame) ? setTimeout(function() { showBlocks(timelineBlocks, offset); }, 100): window.requestAnimationFrame(function() { showBlocks(timelineBlocks, offset); });
     });
 
     function hideBlocks(blocks, offset) {
-        blocks.each(function(){
-            ( $(this).offset().top > $(window).scrollTop()+$(window).height()*offset ) && $(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
+        blocks.each(function() {
+            ($(this).offset().top > $(window).scrollTop() + $(window).height() * offset) && $(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
         });
     }
 
     function showBlocks(blocks, offset) {
-        blocks.each(function(){
-            ( $(this).offset().top <= $(window).scrollTop()+$(window).height()*offset && $(this).find('.cd-timeline-img').hasClass('is-hidden') ) && $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
+        blocks.each(function() {
+            ($(this).offset().top <= $(window).scrollTop() + $(window).height() * offset && $(this).find('.cd-timeline-img').hasClass('is-hidden')) && $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
         });
     }
-});
 
 
 
-$('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        if (target.length) {
-            $('html, body').animate({
-                scrollTop: target.offset().top
-            }, 1000);
-            return false;
+
+    $('a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
         }
-    }
-});
+    });
 
     $(window).scroll(function() {
         wS = $(this).scrollTop();
@@ -229,16 +397,14 @@ $('a[href*="#"]:not([href="#"])').click(function() {
 
     $(window).scroll(function() {
         wS = $(this).scrollTop();
-        console.log(wS);
         if (wS > 6283) {
-            $('#low-bpm').css('animation', '1s linear forwards grow'); 
-            $('#avg-bpm').css('animation', '1s linear 1s forwards grow'); 
+            $('#low-bpm').css('animation', '1s linear forwards grow');
+            $('#avg-bpm').css('animation', '1s linear 1s forwards grow');
             $('#high-bpm').css('animation', '1s linear 2s forwards grow');
-            $('.label-1').css('animation', '1s linear 0.5s forwards width'); 
-            $('.label-2').css('animation', '1s linear 1.5s forwards width'); 
-            $('.label-3').css('animation', '1s linear 2.5s forwards width');  
+            $('.label-1').css('animation', '1s linear 0.5s forwards width');
+            $('.label-2').css('animation', '1s linear 1.5s forwards width');
+            $('.label-3').css('animation', '1s linear 2.5s forwards width');
         }
     });
 
-
-
+});
