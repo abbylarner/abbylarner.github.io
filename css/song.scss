@@ -151,9 +151,9 @@ $box-shadow: 0.5rem 0.5rem $neutral-dark;
         opacity: 0;
     }
     100% {
-       left: 0;
-       opacity: 1;
-   }
+        left: 0;
+        opacity: 1;
+    }
 }
 
 @keyframes pin {
@@ -188,7 +188,6 @@ h1 {
     text-transform: uppercase;
     font-weight: 700;
     font-family: 'Poppins', 'Helvetica', sans-serif;
-
 }
 
 h3 {
@@ -258,7 +257,6 @@ header {
             right: 0;
         }
     }
-
 }
 
 #record-rotate {
@@ -301,7 +299,6 @@ header {
         position: relative;
         overflow: hidden;
     }
-    
     img {
         width: 18rem;
         @media (min-width: 585px) {
@@ -312,12 +309,11 @@ header {
     .overview-label {
         background: $neutral-lightest;
         padding: 1.3rem 1rem 1rem 1rem;
-        width: 75%;
-        left: 25%;
+        width: 50%;
         position: relative;
         top: 1.5rem;
         box-shadow: $box-shadow;
-        margin-bottom: 10rem;
+        margin: 0 auto 10rem auto;
         box-sizing: border-box;
         &.left {
             left: 0;
@@ -332,12 +328,16 @@ header {
             width: 50%;
             margin-left: -5px;
         }
+        @media (min-width: 768px) {
+            margin-top: 2rem;
+            width: 100%;
+            margin-left: -5px;
+        }
         @media (min-width: 900px) {
             margin: 2rem auto 0 auto;
             width: 80%;
         }
     }
-
 }
 
 .genre-wrapper {
@@ -570,7 +570,6 @@ header {
             margin: 1rem 0 0 0;
         }
     }
-    
     iframe {
         z-index: 0;
     }
@@ -589,8 +588,6 @@ header {
         font-size: 1.25rem;
         text-transform: uppercase;
     }
-
-
     .title {
         font-size: 3rem;
     }
@@ -687,7 +684,6 @@ header {
                 padding-top: 0;
             }
         }
-
         .full-header {
             padding-left: 1.5rem;
         }
@@ -699,8 +695,6 @@ header {
         font-size: 1.6rem;
     }
 }
-
-
 
 .release-wrapper {
     h1 {
@@ -723,17 +717,15 @@ header {
     background: $primary-color;
     padding: 5rem 0;
     text-align: center;
-
     img {
         max-width: 18rem;
         width: 35%;
     }
-
     h1 {
         color: $white;
         max-width: 60rem;
         margin: 0 auto;
-        @media (min-width: 992px){
+        @media (min-width: 992px) {
             margin-top: 6rem;
         }
     }
@@ -743,23 +735,19 @@ header {
         max-width: 60rem;
         margin: 1rem auto 0 auto;
     }
-
     .label-wrapper {
         width: 50%;
-        width: 75%;
-        left: 25%;
-
+        margin: 2rem auto 0 auto;
         position: relative;
         @media (min-width: 585px) {
             position: static;
             display: inline-block;
             vertical-align: middle;
-            width: 50%;
             margin-left: -5px;
+            margin-top: 0;
         }
     }
-
-     .overview-label {
+    .overview-label {
         background: $neutral-lightest;
         padding: 1.3rem 1rem 1rem 1rem;
         display: block;
@@ -769,22 +757,13 @@ header {
         box-shadow: $box-shadow;
         box-sizing: border-box;
         transform-origin: 0 50%;
-
         &:last-child {
             margin-bottom: 0;
         }
-        
     }
-    .bpm-ind {
-        margin-top: 6rem;
-
-        @media (min-width: 768px){
-            margin-bottom: 2rem;
-            margin-top: 0;
-        }
-    }
-
-    #low-bpm, #avg-bpm, #high-bpm {
+    #low-bpm,
+    #avg-bpm,
+    #high-bpm {
         -webkit-transform: scale( 0);
         -moz-transform: scale( 0);
         -o-transform: scale( 0);
@@ -793,11 +772,19 @@ header {
     }
 }
 
+.bpm-ind {
+    margin-top: 6rem;
+    @media (min-width: 768px) {
+        margin-bottom: 2rem;
+        margin-top: 0;
+    }
+}
+
 .word-wrapper {
     background: $neutral-dark;
     padding: 5rem 7rem;
-
-    h1, p {
+    h1,
+    p {
         max-width: 60rem;
         margin: 0 auto;
         color: $neutral-lightest;
@@ -805,7 +792,6 @@ header {
     p {
         margin-bottom: 4rem;
     }
-
     a {
         color: $primary-color;
     }
@@ -816,9 +802,11 @@ header {
         width: 100%;
     }
 }
+
 .summary-wrapper {
     padding: 7rem 5rem;
 }
+
 .summary {
     max-width: 60rem;
     margin: 0 auto;
@@ -828,14 +816,12 @@ header {
     padding: 7rem 5rem;
     background: $neutral-dark;
     color: $neutral-lightest;
-
     a {
         color: $primary-color;
     }
     p {
         margin-bottom: 2rem;
     }
-
     iframe {
         width: 80%;
         min-width: 280px;
@@ -856,11 +842,13 @@ header {
     font-size: 2.4rem;
     text-transform: uppercase;
     font-weight: 700;
-    color: $neutral-dark;;
+    color: $neutral-dark;
+    ;
     margin-top: 3rem;
     margin-bottom: 3rem;
-
-    &:hover, &:focus, &:active {
+    &:hover,
+    &:focus,
+    &:active {
         color: $neutral-dark;
     }
     &:hover {
@@ -874,13 +862,13 @@ header {
 
 .resources h1 {
     margin-top: 4rem;
-    @media (min-width: 768px){
+    @media (min-width: 768px) {
         margin-top: 0;
     }
 }
 
 .song-info p {
-    @media (min-width: 768px){
+    @media (min-width: 768px) {
         margin-top: 0;
     }
 }
@@ -897,7 +885,7 @@ footer {
 .artist-inner {
     max-width: 100rem;
     margin: 0 auto;
-        & > p {
+    & > p {
         padding-bottom: 8rem;
         color: $neutral-light;
         max-width: 60rem;

@@ -411,4 +411,33 @@ $(document).ready(function() {
         }
     });
 
+    if ($('.map-wrapper').visible()) {
+            $('.flag:nth-child(2)').css('animation', '1s linear forwards bouncePin');
+            $('.flag:nth-child(3)').css('animation', '1s linear 0.25s forwards bouncePin');
+            $('.flag:nth-child(4)').css('animation', '1s linear 0.7s forwards bouncePin');
+            $('.flag:nth-child(5)').css('animation', '1s linear 0.75s forwards bouncePin');
+            $('.flag:nth-child(6)').css('animation', '1s linear 1s forwards bouncePin');
+            $('.flag:nth-child(7)').css('animation', '1s linear 1.25s forwards bouncePin');
+            $('.flag:nth-child(8)').css('animation', '1s linear 1.5s forwards bouncePin');
+            $('.flag:nth-child(9)').css('animation', '1s linear 1.75s forwards bouncePin');
+            $('.flag:nth-child(10)').css('animation', '1s linear 2s forwards bouncePin');
+        }
+
+        if ($('#low-bpm').visible()) {
+            $('#low-bpm').css('animation', '1s linear forwards grow');
+            $('.label-1').css('animation', '1s linear 0.5s forwards width');
+
+        }
+
+        if ($('#avg-bpm').visible()) {
+            $('#avg-bpm').css('animation', '1s linear 1s forwards grow');
+            $('.label-2').css('animation', '1s linear 1.5s forwards width');
+           
+        }
+
+        if ($('#high-bpm').visible()) {
+            $('#high-bpm').css('animation', '1s linear 2s forwards grow');
+            $('.label-3').css('animation', '1s linear 2.5s forwards width');
+        }
+
 });
