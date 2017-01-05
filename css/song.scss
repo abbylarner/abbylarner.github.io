@@ -384,6 +384,8 @@ header {
     }
     .chart {
         position: relative;
+        max-width: 35.3rem;
+        margin: 0 auto;
     }
     .pop-img {
         text-align: left;
@@ -392,8 +394,14 @@ header {
             margin-bottom: 0;
         }
         img {
-            top: 33%;
+            top: 23%;
             left: 35%;
+            @media (min-width: 400px){
+                top: 25%;
+            }
+            @media (min-width: 768px){
+                top: 23%;
+            }
         }
         h3 {
             margin-bottom: 1rem;
@@ -430,6 +438,12 @@ header {
         img {
             top: 23%;
             left: 35%;
+            @media (min-width: 400px){
+                top: 25%;
+            }
+            @media (min-width: 768px){
+                top: 23%;
+            }
         }
         h3 {
             margin-bottom: 1rem;
@@ -466,6 +480,12 @@ header {
         img {
             top: 22%;
             left: 35%;
+            @media (min-width: 400px){
+                top: 25%;
+            }
+            @media (min-width: 768px){
+                top: 23%;
+            }
         }
         h3 {
             margin-bottom: 1rem;
@@ -502,6 +522,12 @@ header {
         img {
             top: 21%;
             left: 35%;
+            @media (min-width: 400px){
+                top: 25%;
+            }
+            @media (min-width: 768px){
+                top: 23%;
+            }
         }
         h3 {
             margin-bottom: 1rem;
@@ -534,6 +560,12 @@ header {
         img {
             top: 15%;
             left: 34%;
+            @media (min-width: 400px){
+                top: 19%;
+            }
+            @media (min-width: 768px){
+                top: 16%;
+            }
         }
         h3 {
             margin-bottom: 1rem;
@@ -704,12 +736,21 @@ header {
         width: 90%;
         max-width: 1170px;
         margin: 0 auto;
-        padding: 8rem 2rem 2rem 6rem;
+        padding: 8rem 2rem 2rem 2rem;
         text-align: center;
+        @media (min-width: 768px){
+            padding: 8rem 2rem 2rem 6rem;
+
+        }
     }
     > p {
-        max-width: 60rem;
-        margin: 0 auto;
+        padding: 0 4rem;
+
+        @media (min-width: 768px){
+            max-width: 60rem;
+            margin: 0 auto;
+            padding: 0;
+        }
     }
 }
 
@@ -804,7 +845,10 @@ header {
 }
 
 .summary-wrapper {
-    padding: 7rem 5rem;
+    padding: 7rem 2rem;
+    @media (min-width: 768px){
+        padding: 7rem 5rem;
+    }
 }
 
 .summary {
@@ -813,7 +857,7 @@ header {
 }
 
 .playlist-wrapper {
-    padding: 7rem 5rem;
+    padding: 7rem 0;
     background: $neutral-dark;
     color: $neutral-lightest;
     a {
@@ -825,6 +869,9 @@ header {
     iframe {
         width: 80%;
         min-width: 280px;
+    }
+    @media (min-width: 768px){
+        padding: 7rem 5rem;
     }
 }
 
