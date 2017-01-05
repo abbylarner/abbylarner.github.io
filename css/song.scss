@@ -594,7 +594,7 @@ header {
     .map-wrapper {
         position: relative;
         max-width: 105rem;
-        margin: 0 auto;
+        margin: 8rem auto 0 auto;
         .flag {
             width: 5rem;
             position: absolute;
@@ -886,7 +886,6 @@ footer {
     max-width: 100rem;
     margin: 0 auto;
     & > p {
-        padding-bottom: 8rem;
         color: $neutral-light;
         max-width: 60rem;
     }
